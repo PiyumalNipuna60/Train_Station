@@ -22,9 +22,6 @@
     <list default="true" id="45208517-7dbb-42d9-9fa4-451aa42eef4c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/AddBookingCustomerFromController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Train_Station/controller/AddBookingCustomerFromController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppInitialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppInitialize.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/AddBookingCustomerFromController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AddBookingCustomerFromController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -59,6 +56,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="util" />
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -99,7 +97,7 @@
       <workItem from="1667296327738" duration="1135000" />
       <workItem from="1667297588142" duration="1005000" />
       <workItem from="1667323332709" duration="50000" />
-      <workItem from="1667323427292" duration="240000" />
+      <workItem from="1667323427292" duration="897000" />
     </task>
     <servers />
   </component>
@@ -123,29 +121,29 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="361" y="91" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1667323668729" />
-    <state x="574" y="148" key="#com.intellij.ide.util.MemberChooser" timestamp="1667240838590">
+    <state x="574" y="148" key="#com.intellij.ide.util.MemberChooser" timestamp="1667324142073">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="574" y="148" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1667240838590" />
+    <state x="574" y="148" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1667324142073" />
     <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1667323454207">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1667323454207" />
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1667323383015">
+    <state width="1024" height="223" key="GridCell.Tab.0.bottom" timestamp="1667323844247">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1667323383015" />
-    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1667323383014">
+    <state width="1024" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1667323844247" />
+    <state width="1024" height="223" key="GridCell.Tab.0.center" timestamp="1667323844247">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1667323383014" />
-    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1667323383014">
+    <state width="1024" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1667323844247" />
+    <state width="1024" height="223" key="GridCell.Tab.0.left" timestamp="1667323844247">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1667323383014" />
-    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1667323383015">
+    <state width="1024" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1667323844247" />
+    <state width="1024" height="223" key="GridCell.Tab.0.right" timestamp="1667323844247">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1667323383015" />
+    <state width="1024" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1667323844247" />
   </component>
 </project>
