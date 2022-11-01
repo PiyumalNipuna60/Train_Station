@@ -32,6 +32,14 @@ public class AddBookingCustomerFromController {
     public TextField txtCusBookDate;
     public TableColumn colDate;
 
+    public void initialize() {
+        uploadComboBox();
+        btnBooking.setDisable(true);
+    }
+
+    private void uploadComboBox() {
+    }
+
     public void btnBookingOnAction(ActionEvent actionEvent) {
     }
 

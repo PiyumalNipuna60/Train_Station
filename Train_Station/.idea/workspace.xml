@@ -20,11 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45208517-7dbb-42d9-9fa4-451aa42eef4c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/Train_Station.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/AddBookingCustomerFromController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Train_Station/controller/AddBookingCustomerFromController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppInitialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppInitialize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/AddBookingCustomerFromController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AddBookingCustomerFromController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +35,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -48,12 +49,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -61,6 +63,7 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\DELL\Desktop\Train_Station\Train_Station\src\views" />
+      <recent name="C:\Users\DELL\Desktop\Train_Station\Train_Station\src\lib" />
       <recent name="C:\Users\DELL\Desktop\Train_Station\Train_Station\src\assets" />
       <recent name="C:\Users\DELL\Desktop\Train_Station\Train_Station\src" />
     </key>
@@ -90,7 +93,13 @@
       <option name="presentableId" value="Default" />
       <updated>1667151746237</updated>
       <workItem from="1667151749267" duration="662000" />
-      <workItem from="1667240476595" duration="305000" />
+      <workItem from="1667240476595" duration="1108000" />
+      <workItem from="1667276644482" duration="702000" />
+      <workItem from="1667286069221" duration="115000" />
+      <workItem from="1667296327738" duration="1135000" />
+      <workItem from="1667297588142" duration="1005000" />
+      <workItem from="1667323332709" duration="50000" />
+      <workItem from="1667323427292" duration="240000" />
     </task>
     <servers />
   </component>
@@ -110,21 +119,33 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1667152419000">
+    <state x="361" y="91" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1667323668729">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1667152419000" />
-    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1667152419000">
+    <state x="361" y="91" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1667323668729" />
+    <state x="574" y="148" key="#com.intellij.ide.util.MemberChooser" timestamp="1667240838590">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1667152419000" />
-    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1667152419000">
+    <state x="574" y="148" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1667240838590" />
+    <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1667323454207">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1667152419000" />
-    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1667152419000">
+    <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1667323454207" />
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1667323383015">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1667152419000" />
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1667323383015" />
+    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1667323383014">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1667323383014" />
+    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1667323383014">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1667323383014" />
+    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1667323383015">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1667323383015" />
   </component>
 </project>
