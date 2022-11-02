@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="employeeAnchorPane" prefHeight="673.0" prefWidth="1163.0" style="-fx-border-radius: 10px; -fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddEmployeeFromController">
+   <children>
+      <ImageView fitHeight="633.0" fitWidth="1163.0" layoutY="40.0" opacity="0.34" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/vintage-locomotive-railway.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnAddEmployee" layoutX="187.0" layoutY="535.0" mnemonicParsing="false" onAction="#btnAddEmployeeOnAction" prefHeight="57.0" prefWidth="150.0" style="-fx-background-color: #55efc4; -fx-background-radius: 20;" text="Add Employee">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Label prefHeight="45.0" prefWidth="1163.0" style="-fx-background-color: #c5b368;" text="   Add Employee" textFill="#141414">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="34.0" layoutY="76.0" prefHeight="37.0" prefWidth="415.0" style="-fx-border-color: black; -fx-background-color: #ffffff; -fx-border-radius: 20; -fx-background-radius: 20;">
+         <children>
+            <TextField fx:id="txtEmpId" layoutX="8.0" layoutY="4.0" onAction="#SearchOnAction" onKeyReleased="#textFields_Key_Releaseed" prefHeight="33.0" prefWidth="407.0" promptText="E00-001" style="-fx-border-color: white; -fx-background-color: white; -fx-border-radius: 20px; -fx-background-radius: 20;" />
+            <Label layoutX="14.0" layoutY="-11.0" prefHeight="23.0" prefWidth="99.0" style="-fx-background-color: white; -fx-border-color: white;" text="  Employee Id">
+               <effect>
+                  <Blend mode="SRC_ATOP" />
+               </effect>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="34.0" layoutY="149.0" prefHeight="37.0" prefWidth="415.0" style="-fx-border-color: black; -fx-background-color: #ffffff; -fx-border-radius: 20; -fx-background-radius: 20;">
+         <children>
+            <TextField fx:id="txtEmpName" layoutX="8.0" layoutY="4.0" onKeyReleased="#textFields_Key_Releaseed" prefHeight="33.0" prefWidth="407.0" promptText="Nipuna Piyumal" style="-fx-border-color: white; -fx-background-color: white; -fx-border-radius: 20px; -fx-background-radius: 20;" />
+            <Label layoutX="8.0" layoutY="-10.0" prefHeight="21.0" prefWidth="126.0" style="-fx-background-color: white;" text="  Employee Name">
+               <effect>
+                  <Blend mode="SRC_ATOP" />
+               </effect>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="34.0" layoutY="221.0" prefHeight="37.0" prefWidth="415.0" style="-fx-border-color: black; -fx-background-color: #ffffff; -fx-border-radius: 20; -fx-background-radius: 20;">
+         <children>
+            <TextField fx:id="txtEmpAddress" layoutX="8.0" layoutY="4.0" onKeyReleased="#textFields_Key_Releaseed" prefHeight="33.0" prefWidth="407.0" promptText="Colombo 7" style="-fx-border-color: white; -fx-background-color: white; -fx-border-radius: 20px; -fx-background-radius: 20;" />
+            <Label layoutX="14.0" layoutY="-11.0" prefHeight="23.0" prefWidth="141.0" style="-fx-background-color: white; -fx-border-color: white;" text="  Employee Address">
+               <effect>
+                  <Blend mode="SRC_ATOP" />
+               </effect>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="34.0" layoutY="375.0" prefHeight="37.0" prefWidth="415.0" style="-fx-border-color: black; -fx-background-color: #ffffff; -fx-border-radius: 20; -fx-background-radius: 20;">
+         <children>
+            <TextField fx:id="txtEmpTel" layoutX="8.0" layoutY="4.0" onKeyReleased="#textFields_Key_Releaseed" prefHeight="33.0" prefWidth="407.0" promptText="0712425679" style="-fx-border-color: white; -fx-background-color: white; -fx-border-radius: 20px; -fx-background-radius: 20;" />
+            <Label layoutX="14.0" layoutY="-11.0" prefHeight="23.0" prefWidth="64.0" style="-fx-background-color: white; -fx-border-color: white;" text="contact">
+               <effect>
+                  <Blend mode="SRC_ATOP" />
+               </effect>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="34.0" layoutY="298.0" prefHeight="37.0" prefWidth="415.0" style="-fx-border-color: black; -fx-background-color: #ffffff; -fx-border-radius: 20; -fx-background-radius: 20;">
+         <children>
+            <TextField fx:id="txtEmpAge" layoutX="8.0" layoutY="4.0" onKeyReleased="#textFields_Key_Releaseed" prefHeight="33.0" prefWidth="407.0" promptText="20" style="-fx-border-color: white; -fx-background-color: white; -fx-border-radius: 20px; -fx-background-radius: 20;" />
+            <Label layoutX="14.0" layoutY="-11.0" prefHeight="23.0" prefWidth="113.0" style="-fx-background-color: white; -fx-border-color: white;" text="  Employee Age">
+               <effect>
+                  <Blend mode="SRC_ATOP" />
+               </effect>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="34.0" layoutY="449.0" prefHeight="37.0" prefWidth="415.0" style="-fx-border-color: black; -fx-background-color: #ffffff; -fx-border-radius: 20; -fx-background-radius: 20;">
+         <children>
+            <TextField fx:id="txtEmpSalary" layoutX="8.0" layoutY="4.0" onKeyReleased="#textFields_Key_Releaseed" prefHeight="33.0" prefWidth="407.0" promptText="1000.00" style="-fx-border-color: white; -fx-background-color: white; -fx-border-radius: 20px; -fx-background-radius: 20;" />
+            <Label layoutX="14.0" layoutY="-11.0" prefHeight="23.0" prefWidth="126.0" style="-fx-background-color: white; -fx-border-color: white;" text="  Employee Salary">
+               <effect>
+                  <Blend mode="SRC_ATOP" />
+               </effect>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnBack" layoutX="30.0" layoutY="535.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="57.0" prefWidth="150.0" style="-fx-background-color: #55efc4; -fx-background-radius: 20;" text="Back">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Separator layoutX="480.0" layoutY="60.0" orientation="VERTICAL" prefHeight="598.0" prefWidth="6.0" />
+      <TableView fx:id="tblEmployee" layoutX="486.0" layoutY="66.0" prefHeight="586.0" prefWidth="648.0">
+         <columns>
+            <TableColumn fx:id="colEmpId" prefWidth="115.0" text="Emp Id" />
+            <TableColumn fx:id="colEmpName" prefWidth="132.0" text="Employee Name" />
+            <TableColumn fx:id="colEmpAddress" minWidth="6.0" prefWidth="171.0" text="Employee Address" />
+            <TableColumn fx:id="colEmpAge" prefWidth="54.0" text="Age" />
+            <TableColumn fx:id="colEmpTel" minWidth="0.0" prefWidth="98.0" text="Tel" />
+            <TableColumn fx:id="colEmpSalary" prefWidth="85.0" text="Emp Salary" />
+         </columns>
+      </TableView>
+      <Button layoutX="348.0" layoutY="535.0" mnemonicParsing="false" onAction="#btnEmployeeReportOnAction" prefHeight="57.0" prefWidth="126.0" style="-fx-background-color: #55efc4; -fx-background-radius: 20;" text="Get Report">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="45.0" layoutY="623.0" mnemonicParsing="false" onAction="#btnclearOnAction" prefHeight="33.0" prefWidth="429.0" style="-fx-background-color: #81ecec; -fx-background-radius: 20;" text="Clear Field" />
+   </children>
+</AnchorPane>
