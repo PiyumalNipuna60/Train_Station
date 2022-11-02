@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="TrainStation">
+<dataSource name="TrainStationProject">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.18">
     <root id="1">
       <ServerVersion>8.0.22</ServerVersion>

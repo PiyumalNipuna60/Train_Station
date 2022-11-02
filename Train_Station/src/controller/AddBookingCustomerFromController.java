@@ -39,7 +39,7 @@ public class AddBookingCustomerFromController {
 
     public void initialize() {
         uploadComboBox();
-        btnBooking.setDisable(true);
+//        btnBooking.setDisable(true);
     }
 
     private void uploadComboBox() {
@@ -55,10 +55,13 @@ public class AddBookingCustomerFromController {
         try {
             if (CrudUtil.executeUpdate("INSERT INTO booking VALUES(?,?,?,?,?,?,?,?,?,?,?,?)",c.getId(),c.getName(),c.getAddress(),
                     c.getContact(),c.getTrainFrom(),c.getTrainTo(),c.getTrain(),c.getSeatNo(),c.getTrainClass(),c.getPrice(),c.getPrice(),c.getDate())){
-                
+                new Alert(Alert.AlertType.CONFIRMATION, "Saved!..").show();
+            }else {
+
             }
         } catch (SQLException | ClassNotFoundException throwables) {
             throwables.printStackTrace();
+            new Alert(Alert.AlertType.ERROR, throwables.getMessage()).show();
         }
 
     }
