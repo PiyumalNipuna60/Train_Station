@@ -14,12 +14,13 @@ public class BookingCustomer {
     private String seatNo;
     private String trainClass;
     private String price;
-    private java.util.Date Date;
+    private String Date;
 
     public BookingCustomer() {
     }
 
-    public BookingCustomer(String id, String name, String address, String contact, String trainFrom, String trainTo, String time, String train, String seatNo, String trainClass, String price, java.util.Date date) {
+    public BookingCustomer(String id, String name, String address, String contact, String trainFrom, String trainTo, String time, String train, String seatNo, String trainClass, String price,String date) {
+
         this.id = id;
         this.name = name;
         this.address = address;
@@ -31,7 +32,7 @@ public class BookingCustomer {
         this.seatNo = seatNo;
         this.trainClass = trainClass;
         this.price = price;
-        Date = date;
+        this.Date = date;
     }
 
     public String getId() {
@@ -122,11 +123,11 @@ public class BookingCustomer {
         this.price = price;
     }
 
-    public java.util.Date getDate() {
+    public String getDate() {
         return Date;
     }
 
-    public void setDate(java.util.Date date) {
+    public void setDate(String date) {
         Date = date;
     }
 
