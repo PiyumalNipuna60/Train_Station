@@ -70,6 +70,22 @@ public class AddBookingCustomerFromController {
         try {
                 BookingCustomer b = searchBooking(txtCusId.getText());
 
+            if (b==null){
+                new Alert(Alert.AlertType.WARNING,"Empty values!..").show();
+            }else {
+                txtCusId.setText(b.getId());
+                txtCusName.setText(b.getName());
+                txtCusAddress.setText(b.getAddress());
+                txtCusContact.setText(b.getContact());
+                cmbCusFrom.setValue(b.getTrainFrom());
+                cmbCusTo.setValue(b.getTrainTo());
+                txtTrainTime.setText(b.getTime());
+                cmbCusTrain.setValue(b.getTrain());
+                cmbCusSeatNo.setValue(b.getSeatNo());
+                cmbCusClass.setValue(b.getTrainClass());
+                txtCusPrice.setText(b.getPrice());
+                txtCusBookDate.setText(b.getDate());
+            }
             } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
