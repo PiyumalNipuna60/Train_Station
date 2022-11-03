@@ -1,5 +1,7 @@
 package controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
@@ -64,6 +66,16 @@ public class AddBookingCustomerFromController {
     }
 
     private void comboFrom() {
+        try {
+            ResultSet result = CrudUtil.executeQuery("SELECT * FROM station");
+            ObservableList obList = FXCollections.observableArrayList();
+            while (result.next()){
+                obList.add(new String(result.getString(2)));
+            }
+            cmbCusFrom.setItems(obList);
+        } catch (SQLException | ClassNotFoundException throwables) {
+            throwables.printStackTrace();
+        }
     }
 
 
