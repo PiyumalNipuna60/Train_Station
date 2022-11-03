@@ -45,6 +45,7 @@ public class AddBookingCustomerFromController {
     private void uploadComboBox() {
     }
 
+
     public void btnBookingOnAction(ActionEvent actionEvent) {
         BookingCustomer c = new BookingCustomer(
                 txtCusId.getText(), txtCusName.getText(), txtCusAddress.getText(), txtCusContact.getText(),
@@ -114,17 +115,8 @@ public class AddBookingCustomerFromController {
         }return null;
     }
 
-
-
-    public void textFields_Key_Releaseed(KeyEvent keyEvent) {
-    }
-
     public void btnClearOnAction(ActionEvent actionEvent) {
         ClearFields();
-    }
-
-
-    public void btnPrintOnAction(ActionEvent actionEvent) {
     }
 
     private void ClearFields() {
@@ -141,4 +133,18 @@ public class AddBookingCustomerFromController {
         cmbCusClass.getSelectionModel().clearSelection();
         txtCusBookDate.clear();
     }
+
+
+
+    public void textFields_Key_Releaseed(KeyEvent keyEvent) {
+    }
+
+    public void btnPrintOnAction(ActionEvent actionEvent) {
+    }
+
+
+
+
+
+
 }
