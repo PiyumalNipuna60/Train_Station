@@ -45,11 +45,15 @@ public class AddBookingCustomerFromController {
     }
 
     private void uploadComboBox() {
-        comboFrom();
-        comboTo();
-        comboTrain();
-        comboSeatNo();
-        comboClass();
+        try {
+            comboFrom();
+            comboTo();
+            comboTrain();
+            comboSeatNo();
+            comboClass();
+        } catch (SQLException | ClassNotFoundException x) {
+            x.printStackTrace();
+        }
     }
 
     private void comboClass() {
@@ -62,7 +66,16 @@ public class AddBookingCustomerFromController {
 
     }
 
-    private void comboTo() {
+    private void comboTo() throws SQLException, ClassNotFoundException {
+
+            ResultSet resultSet = CrudUtil.executeQuery("SELECT * FROM station");
+            ObservableList obList=FXCollections.observableArrayList();
+            while (resultSet.next()){
+                obList.add(new String(resultSet.getString(2)));
+            }
+            cmbCusTo.setItems(obList);
+
+
     }
 
     private void comboFrom() {
