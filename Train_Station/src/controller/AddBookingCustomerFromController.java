@@ -43,6 +43,27 @@ public class AddBookingCustomerFromController {
     }
 
     private void uploadComboBox() {
+        comboFrom();
+        comboTo();
+        comboTrain();
+        comboSeatNo();
+        comboClass();
+    }
+
+    private void comboClass() {
+    }
+
+    private void comboTrain() {
+    }
+
+    private void comboSeatNo() {
+
+    }
+
+    private void comboTo() {
+    }
+
+    private void comboFrom() {
     }
 
 
