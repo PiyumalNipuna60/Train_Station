@@ -6,8 +6,8 @@ import javafx.scene.input.KeyEvent;
 import model.BookingCustomer;
 import util.CrudUtil;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Date;
 
 public class AddBookingCustomerFromController {
     public Button btnBooking;
@@ -46,17 +46,17 @@ public class AddBookingCustomerFromController {
     }
 
     public void btnBookingOnAction(ActionEvent actionEvent) {
-        BookingCustomer c=new BookingCustomer(
-                txtCusId.getText(),txtCusName.getText(),txtCusAddress.getText(),txtCusContact.getText(),
-                String.valueOf(cmbCusFrom.getValue()),String.valueOf(cmbCusTo.getValue()),txtTrainTime.getText(),
+        BookingCustomer c = new BookingCustomer(
+                txtCusId.getText(), txtCusName.getText(), txtCusAddress.getText(), txtCusContact.getText(),
+                String.valueOf(cmbCusFrom.getValue()), String.valueOf(cmbCusTo.getValue()), txtTrainTime.getText(),
                 String.valueOf(cmbCusTrain.getValue()), String.valueOf(cmbCusSeatNo.getValue()),
-                String.valueOf(cmbCusClass.getValue()), txtCusPrice.getText(),txtCusBookDate.getText()
+                String.valueOf(cmbCusClass.getValue()), txtCusPrice.getText(), txtCusBookDate.getText()
         );
         try {
-            if (CrudUtil.executeUpdate("INSERT INTO booking VALUES(?,?,?,?,?,?,?,?,?,?,?,?)",c.getId(),c.getName(),c.getAddress(),
-                    c.getContact(),c.getTrainFrom(),c.getTrainTo(),c.getTrain(),c.getSeatNo(),c.getTrainClass(),c.getPrice(),c.getPrice(),c.getDate())){
+            if (CrudUtil.executeUpdate("INSERT INTO booking VALUES(?,?,?,?,?,?,?,?,?,?,?,?)", c.getId(), c.getName(), c.getAddress(),
+                    c.getContact(), c.getTrainFrom(), c.getTrainTo(), c.getTrain(), c.getSeatNo(), c.getTrainClass(), c.getPrice(), c.getPrice(), c.getDate())) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Saved!..").show();
-            }else {
+            } else {
 
             }
         } catch (SQLException | ClassNotFoundException throwables) {
@@ -67,7 +67,20 @@ public class AddBookingCustomerFromController {
     }
 
     public void txtSearchOnAction(ActionEvent actionEvent) {
+        try {
+                BookingCustomer b = searchBooking(txtCusId.getText());
+
+            } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
     }
+
+    private BookingCustomer searchBooking(String id) throws SQLException, ClassNotFoundException {
+
+    }
+
+
 
     public void textFields_Key_Releaseed(KeyEvent keyEvent) {
     }
@@ -85,13 +98,13 @@ public class AddBookingCustomerFromController {
         txtCusId.clear();
         txtCusAddress.clear();
         txtCusContact.clear();
-        cmbCusFrom.getSelectionModel().clearSelection();;
-        cmbCusTo.getSelectionModel().clearSelection();;
-        cmbCusTrain.getSelectionModel().clearSelection();;
+        cmbCusFrom.getSelectionModel().clearSelection();
+        cmbCusTo.getSelectionModel().clearSelection();
+        cmbCusTrain.getSelectionModel().clearSelection();
         txtCusPrice.clear();
-        cmbCusSeatNo.getSelectionModel().clearSelection();;
+        cmbCusSeatNo.getSelectionModel().clearSelection();
         txtTrainTime.clear();
-        cmbCusClass.getSelectionModel().clearSelection();;
+        cmbCusClass.getSelectionModel().clearSelection();
         txtCusBookDate.clear();
     }
 }
