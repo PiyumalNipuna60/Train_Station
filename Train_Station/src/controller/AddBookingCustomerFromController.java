@@ -73,8 +73,25 @@ public class AddBookingCustomerFromController {
     }
 
     public void btnClearOnAction(ActionEvent actionEvent) {
+        ClearFields();
     }
 
+
     public void btnPrintOnAction(ActionEvent actionEvent) {
+    }
+
+    private void ClearFields() {
+        txtCusName.clear();
+        txtCusId.clear();
+        txtCusAddress.clear();
+        txtCusContact.clear();
+        cmbCusFrom.getSelectionModel().clearSelection();;
+        cmbCusTo.getSelectionModel().clearSelection();;
+        cmbCusTrain.getSelectionModel().clearSelection();;
+        txtCusPrice.clear();
+        cmbCusSeatNo.getSelectionModel().clearSelection();;
+        txtTrainTime.clear();
+        cmbCusClass.getSelectionModel().clearSelection();;
+        txtCusBookDate.clear();
     }
 }
