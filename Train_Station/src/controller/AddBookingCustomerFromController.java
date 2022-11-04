@@ -10,6 +10,7 @@ import util.CrudUtil;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class AddBookingCustomerFromController {
     public Button btnBooking;
@@ -66,8 +67,13 @@ public class AddBookingCustomerFromController {
         cmbCusClass.setItems(obList);
     }
 
-    private void comboTrain() {
-
+    private void comboTrain() throws SQLException, ClassNotFoundException {
+        ResultSet resultSet = CrudUtil.executeQuery("SELECT * FROM train");
+        ObservableList obList=FXCollections.observableArrayList();
+        while (resultSet.next()){
+            obList.add(new String(resultSet.getString(2)));
+        }
+        cmbCusSeatNo.setItems(obList);
     }
 
     private void comboSeatNo() throws SQLException, ClassNotFoundException {
