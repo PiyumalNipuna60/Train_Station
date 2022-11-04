@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="45208517-7dbb-42d9-9fa4-451aa42eef4c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/AddBookingCustomerFromController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AddBookingCustomerFromController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +108,7 @@
       <workItem from="1667490781757" duration="1515000" />
       <workItem from="1667492947414" duration="1530000" />
       <workItem from="1667496989162" duration="11000" />
-      <workItem from="1667587295873" duration="308000" />
+      <workItem from="1667587295873" duration="701000" />
     </task>
     <servers />
   </component>

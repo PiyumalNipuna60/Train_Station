@@ -57,9 +57,17 @@ public class AddBookingCustomerFromController {
     }
 
     private void comboClass() {
+        ObservableList obList=FXCollections.observableArrayList();
+        obList.add("1");
+        obList.add("2");
+        obList.add("3");
+        obList.add("A/C");
+
+        cmbCusClass.setItems(obList);
     }
 
     private void comboTrain() {
+
     }
 
     private void comboSeatNo() throws SQLException, ClassNotFoundException {
