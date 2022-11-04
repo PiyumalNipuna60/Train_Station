@@ -4,13 +4,13 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import model.BookingCustomer;
 import util.CrudUtil;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 public class AddBookingCustomerFromController {
     public Button btnBooking;
@@ -43,6 +43,51 @@ public class AddBookingCustomerFromController {
     public void initialize() {
         uploadComboBox();
 //        btnBooking.setDisable(true);
+
+        colCusId.setCellValueFactory(new PropertyValueFactory("id"));
+        colCusName.setCellValueFactory(new PropertyValueFactory("name"));
+        colCusAddress.setCellValueFactory(new PropertyValueFactory("address"));
+        colCusTel.setCellValueFactory(new PropertyValueFactory("contact"));
+        colCusFrom.setCellValueFactory(new PropertyValueFactory("trainFrom"));
+        colCusTo.setCellValueFactory(new PropertyValueFactory("trainTo"));
+        colCusTime.setCellValueFactory(new PropertyValueFactory("time"));
+        colCusTrain.setCellValueFactory(new PropertyValueFactory("train"));
+        colCusSeatNo.setCellValueFactory(new PropertyValueFactory("seatNo"));
+        colCusClass.setCellValueFactory(new PropertyValueFactory("class"));
+        colCusPrice.setCellValueFactory(new PropertyValueFactory("price"));
+        colDate.setCellValueFactory(new PropertyValueFactory("date"));
+
+        try {
+            loadTables();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void loadTables() throws SQLException, ClassNotFoundException {
+        ResultSet result = CrudUtil.executeQuery("SELECT*FROM booking");
+        ObservableList<BookingCustomer> obList = FXCollections.observableArrayList();
+
+
+        while (result.next()) {
+            obList.add(
+                    new BookingCustomer(
+                            result.getString("id"),
+                            result.getString("name"),
+                            result.getString("address"),
+                            result.getString("contact"),
+                            result.getString("trainFrom"),
+                            result.getString("trainTo"),
+                            result.getString("time"),
+                            result.getString("train"),
+                            result.getString("seatNo"),
+                            result.getString("class"),
+                            result.getString("price"),
+                            result.getString("date")
+                    ));
+        }
+        tblCustomerBooking.setItems(obList);
+
     }
 
     private void uploadComboBox() {
@@ -58,7 +103,7 @@ public class AddBookingCustomerFromController {
     }
 
     private void comboClass() {
-        ObservableList obList=FXCollections.observableArrayList();
+        ObservableList obList = FXCollections.observableArrayList();
         obList.add("1");
         obList.add("2");
         obList.add("3");
@@ -69,8 +114,8 @@ public class AddBookingCustomerFromController {
 
     private void comboTrain() throws SQLException, ClassNotFoundException {
         ResultSet resultSet = CrudUtil.executeQuery("SELECT * FROM train");
-        ObservableList obList=FXCollections.observableArrayList();
-        while (resultSet.next()){
+        ObservableList obList = FXCollections.observableArrayList();
+        while (resultSet.next()) {
             obList.add(new String(resultSet.getString(2)));
         }
         cmbCusSeatNo.setItems(obList);
@@ -78,8 +123,8 @@ public class AddBookingCustomerFromController {
 
     private void comboSeatNo() throws SQLException, ClassNotFoundException {
         ResultSet resultSet = CrudUtil.executeQuery("SELECT * FROM booking");
-        ObservableList obList=FXCollections.observableArrayList();
-        while (resultSet.next()){
+        ObservableList obList = FXCollections.observableArrayList();
+        while (resultSet.next()) {
             obList.add(new String(resultSet.getString(9)));
         }
         cmbCusSeatNo.setItems(obList);
@@ -88,12 +133,12 @@ public class AddBookingCustomerFromController {
 
     private void comboTo() throws SQLException, ClassNotFoundException {
 
-            ResultSet resultSet = CrudUtil.executeQuery("SELECT * FROM station");
-            ObservableList obList=FXCollections.observableArrayList();
-            while (resultSet.next()){
-                obList.add(new String(resultSet.getString(2)));
-            }
-            cmbCusTo.setItems(obList);
+        ResultSet resultSet = CrudUtil.executeQuery("SELECT * FROM station");
+        ObservableList obList = FXCollections.observableArrayList();
+        while (resultSet.next()) {
+            obList.add(new String(resultSet.getString(2)));
+        }
+        cmbCusTo.setItems(obList);
 
 
     }
@@ -102,7 +147,7 @@ public class AddBookingCustomerFromController {
         try {
             ResultSet result = CrudUtil.executeQuery("SELECT * FROM station");
             ObservableList obList = FXCollections.observableArrayList();
-            while (result.next()){
+            while (result.next()) {
                 obList.add(new String(result.getString(2)));
             }
             cmbCusFrom.setItems(obList);
@@ -135,11 +180,11 @@ public class AddBookingCustomerFromController {
 
     public void txtSearchOnAction(ActionEvent actionEvent) {
         try {
-                BookingCustomer b = searchBooking(txtCusId.getText());
+            BookingCustomer b = searchBooking(txtCusId.getText());
 
-            if (b==null){
-                new Alert(Alert.AlertType.WARNING,"Empty values!..").show();
-            }else {
+            if (b == null) {
+                new Alert(Alert.AlertType.WARNING, "Empty values!..").show();
+            } else {
                 txtCusId.setText(b.getId());
                 txtCusName.setText(b.getName());
                 txtCusAddress.setText(b.getAddress());
@@ -153,7 +198,7 @@ public class AddBookingCustomerFromController {
                 txtCusPrice.setText(b.getPrice());
                 txtCusBookDate.setText(b.getDate());
             }
-            } catch (SQLException | ClassNotFoundException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
 
@@ -163,7 +208,7 @@ public class AddBookingCustomerFromController {
         ResultSet resultSet = CrudUtil.executeQuery("SELECT * FROM booking WHERE id=?", id);
 
         if (resultSet.next()) {
-           return new BookingCustomer(
+            return new BookingCustomer(
                     resultSet.getString(1),
                     resultSet.getString(2),
                     resultSet.getString(3),
@@ -178,7 +223,8 @@ public class AddBookingCustomerFromController {
                     resultSet.getString(12)
 
             );
-        }return null;
+        }
+        return null;
     }
 
     public void btnClearOnAction(ActionEvent actionEvent) {
@@ -201,16 +247,11 @@ public class AddBookingCustomerFromController {
     }
 
 
-
     public void textFields_Key_Releaseed(KeyEvent keyEvent) {
     }
 
     public void btnPrintOnAction(ActionEvent actionEvent) {
     }
-
-
-
-
 
 
 }
