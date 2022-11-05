@@ -69,7 +69,20 @@ public class AddEmployeeFromController {
         }
     }
 
-
+    private Employee search(String text) throws SQLException, ClassNotFoundException {
+        ResultSet resultSet = CrudUtil.executeQuery("SELECT * FROM employee WHERE id=?", text);
+        if (resultSet.next()){
+            return new Employee(
+                    resultSet.getString(1),
+                    resultSet.getString(2),
+                    resultSet.getString(3),
+                    resultSet.getString(4),
+                    resultSet.getString(5),
+                    resultSet.getString(6)
+            );
+        }
+        return null;
+    }
 
     public void textFields_Key_Releaseed(KeyEvent keyEvent) {
     }
