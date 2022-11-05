@@ -5,12 +5,15 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import model.BookingCustomer;
 import util.CrudUtil;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.LinkedHashMap;
+import java.util.regex.Pattern;
 
 public class AddBookingCustomerFromController {
     public Button btnBooking;
@@ -39,10 +42,26 @@ public class AddBookingCustomerFromController {
     public TableColumn colCusPrice;
     public TextField txtCusBookDate;
     public TableColumn colDate;
+    LinkedHashMap<TextField, Pattern> map = new LinkedHashMap<>();
+
 
     public void initialize() {
         uploadComboBox();
 //        btnBooking.setDisable(true);
+
+        Pattern patternId = Pattern.compile("^(C00-)[0-9]{3,5}$");
+        Pattern patternName = Pattern.compile("^[A-z ]{3,}$");
+        Pattern patternAddress = Pattern.compile("^[A-z0-9 ,/]{5,}$");
+        Pattern patternContact = Pattern.compile("^(071|072|077|076|078|075)[0-9]{7}$");
+        Pattern patternTime = Pattern.compile("^([01]?[0-9]|2[0-3]).[0-5][0-9]$");
+        Pattern patternPrice = Pattern.compile("^[1-9][0-9]*(.[0-9]{2})?$");
+
+        map.put(txtCusId, patternId);
+        map.put(txtCusName, patternName);
+        map.put(txtCusAddress, patternAddress);
+        map.put(txtCusContact, patternContact);
+        map.put(txtTrainTime, patternTime);
+        map.put(txtCusPrice, patternPrice);
 
         colCusId.setCellValueFactory(new PropertyValueFactory("id"));
         colCusName.setCellValueFactory(new PropertyValueFactory("name"));
@@ -157,7 +176,7 @@ public class AddBookingCustomerFromController {
     }
 
 
-    public void btnBookingOnAction(ActionEvent actionEvent) {
+    public void btnBookingOnAction() {
         BookingCustomer c = new BookingCustomer(
                 txtCusId.getText(), txtCusName.getText(), txtCusAddress.getText(), txtCusContact.getText(),
                 String.valueOf(cmbCusFrom.getValue()), String.valueOf(cmbCusTo.getValue()), txtTrainTime.getText(),
@@ -166,7 +185,7 @@ public class AddBookingCustomerFromController {
         );
         try {
             if (CrudUtil.executeUpdate("INSERT INTO booking VALUES(?,?,?,?,?,?,?,?,?,?,?,?)", c.getId(), c.getName(), c.getAddress(),
-                    c.getContact(), c.getTrainFrom(), c.getTrainTo(), c.getTrain(), c.getSeatNo(), c.getTrainClass(), c.getPrice(), c.getPrice(), c.getDate())) {
+                    c.getContact(), c.getTrainFrom(), c.getTrainTo(), c.getTime(), c.getTrain(), c.getSeatNo(), c.getClass(), c.getPrice(), c.getDate())) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Saved!..").show();
             } else {
 
@@ -248,6 +267,42 @@ public class AddBookingCustomerFromController {
 
 
     public void textFields_Key_Releaseed(KeyEvent keyEvent) {
+        validate();
+
+        if (keyEvent.getCode() == KeyCode.ENTER) {
+            Object responds = validate();
+
+            if (responds instanceof TextField) {
+                TextField textField = (TextField) responds;
+                textField.requestFocus();
+            } else {
+               //  btnBookingOnAction();
+            }
+        }
+    }
+
+    private Object validate() {
+        for (TextField key : map.keySet()) {
+            Pattern pattern = map.get(key);
+            if (!pattern.matcher(key.getText()).matches()) {
+                addError(key);
+                return key;
+            } else
+                removeError(key);
+        }
+        return true;
+    }
+
+    public void removeError(TextField text) {
+        text.getParent().setStyle("-fx-border-color: green");
+        btnBooking.setDisable(false);
+    }
+
+    public void addError(TextField text) {
+        if (text.getText().length() > 0) {
+            text.getParent().setStyle("-fx-border-color: red");
+        }
+        btnBooking.setDisable(true);
     }
 
     public void btnPrintOnAction(ActionEvent actionEvent) {
