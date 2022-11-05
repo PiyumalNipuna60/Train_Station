@@ -84,15 +84,20 @@ public class AddEmployeeFromController {
         return null;
     }
 
-    public void textFields_Key_Releaseed(KeyEvent keyEvent) {
-    }
+
 
     public void btnBackOnAction(ActionEvent actionEvent) {
+        employeeAnchorPane.getChildren().clear();
+    }
+
+    public void btnclearOnAction(ActionEvent actionEvent) {
     }
 
     public void btnEmployeeReportOnAction(ActionEvent actionEvent) {
     }
 
-    public void btnclearOnAction(ActionEvent actionEvent) {
+    public void textFields_Key_Releaseed(KeyEvent keyEvent) {
     }
+
+
 }
