@@ -7,6 +7,7 @@ import javafx.scene.layout.AnchorPane;
 import model.Employee;
 import util.CrudUtil;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class AddEmployeeFromController {
@@ -48,7 +49,27 @@ public class AddEmployeeFromController {
     }
 
     public void SearchOnAction(ActionEvent actionEvent) {
+
+        try {
+            Employee emp=search(txtEmpId.getText());
+            if (emp==null){
+                new Alert(Alert.AlertType.WARNING, "Empty values!..").show();
+            }else {
+                txtEmpId.setText(emp.getId());
+                txtEmpName.setText(emp.getName());
+                txtEmpAddress.setText(emp.getAddress());
+                txtEmpAge.setText(emp.getAge());
+                txtEmpTel.setText(emp.getContact());
+                txtEmpSalary.setText(emp.getSalary());
+            }
+
+
+        } catch (SQLException | ClassNotFoundException x) {
+            x.printStackTrace();
+        }
     }
+
+
 
     public void textFields_Key_Releaseed(KeyEvent keyEvent) {
     }
