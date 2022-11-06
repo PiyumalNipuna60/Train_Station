@@ -94,7 +94,7 @@ public class AddEmployeeFromController {
         try {
             if(CrudUtil.executeUpdate("INSERT INTO employee VALUES(?,?,?,?,?,?)",e.getId(),e.getName(),e.getAddress(),e.getAge(),e.getContact(),e.getSalary())){
                 new Alert(Alert.AlertType.CONFIRMATION, "Saved!..").show();
-
+                loadAllEmployee();
             }else {
                 new Alert(Alert.AlertType.WARNING, "Not Saved!..").show();
             }
