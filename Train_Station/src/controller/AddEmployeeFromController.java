@@ -13,6 +13,8 @@ import util.CrudUtil;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.LinkedHashMap;
+import java.util.regex.Pattern;
 
 public class AddEmployeeFromController {
     public Button btnAddEmployee;
@@ -31,8 +33,25 @@ public class AddEmployeeFromController {
     public TableColumn colEmpAge;
     public TableColumn colEmpTel;
     public TableColumn colEmpSalary;
+    LinkedHashMap<TextField,Pattern> map=new LinkedHashMap<>();
+
 
     public void initialize() {
+
+        Pattern pattenId = Pattern.compile("^(E00-)[0-9]{3,5}$");
+        Pattern pattenName = Pattern.compile("^[A-z ]{3,}$");
+        Pattern pattenAddress = Pattern.compile("^[A-z0-9 ,/]{5,}$");
+        Pattern pattenAge = Pattern.compile("^[0-9]{2}$");
+        Pattern pattenTel = Pattern.compile("^(071|072|077|076|078|075)[0-9]{7}$");
+        Pattern pattenSalary = Pattern.compile("^[1-9][0-9]*(.[0-9]{2})?$");
+
+        map.put(txtEmpId, pattenId);
+        map.put(txtEmpName, pattenName);
+        map.put(txtEmpAddress, pattenAddress);
+        map.put(txtEmpAge, pattenAge);
+        map.put(txtEmpTel, pattenTel);
+        map.put(txtEmpSalary, pattenSalary);
+
         colEmpId.setCellValueFactory(new PropertyValueFactory("id"));
         colEmpName.setCellValueFactory(new PropertyValueFactory("name"));
         colEmpAddress.setCellValueFactory(new PropertyValueFactory("address"));
