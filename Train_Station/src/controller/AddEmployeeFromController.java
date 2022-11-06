@@ -1,9 +1,13 @@
 package controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import model.BookingCustomer;
 import model.Employee;
 import util.CrudUtil;
 
@@ -29,7 +33,36 @@ public class AddEmployeeFromController {
     public TableColumn colEmpSalary;
 
     public void initialize() {
+        colEmpId.setCellValueFactory(new PropertyValueFactory("id"));
+        colEmpName.setCellValueFactory(new PropertyValueFactory("name"));
+        colEmpAddress.setCellValueFactory(new PropertyValueFactory("address"));
+        colEmpAge.setCellValueFactory(new PropertyValueFactory("age"));
+        colEmpTel.setCellValueFactory(new PropertyValueFactory("contact"));
+        colEmpSalary.setCellValueFactory(new PropertyValueFactory("salary"));
 
+        try {
+            loadAllEmployee();
+        } catch (SQLException | ClassNotFoundException X) {
+            X.printStackTrace();
+        }
+    }
+
+    private void loadAllEmployee() throws SQLException, ClassNotFoundException {
+        ResultSet resultSet = CrudUtil.executeQuery("SELECT * FROM employee");
+        ObservableList<Employee> obList = FXCollections.observableArrayList();
+
+        while (resultSet.next()){
+            obList.add(
+              new Employee(
+                      resultSet.getString("id"),
+                      resultSet.getString("name"),
+                      resultSet.getString("address"),
+                      resultSet.getString("age"),
+                      resultSet.getString("contact"),
+                      resultSet.getString("salary")
+              ));
+        }
+        tblEmployee.setItems(obList);
     }
 
     public void btnAddEmployeeOnAction(ActionEvent actionEvent) {
