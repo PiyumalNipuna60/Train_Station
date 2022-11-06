@@ -11,6 +11,7 @@ import model.BookingCustomer;
 import model.Employee;
 import util.CrudUtil;
 
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedHashMap;
@@ -153,12 +154,36 @@ public class AddEmployeeFromController {
         txtEmpSalary.clear();
     }
 
-
-
-
-
     public void textFields_Key_Releaseed(KeyEvent keyEvent) {
     }
+
+    private Object Validation() {
+        for (TextField key : map.keySet()) {
+            Pattern pattern = map.get(key);
+            if (!pattern.matcher(key.getText()).matches()) {
+                addError(key);
+                return key;
+            } else
+                removeError(key);
+
+        }
+        return true;
+    }
+
+    public void addError(TextField txtCus) {
+        if (txtCus.getText().length() > 0) {
+            txtCus.getParent().setStyle("-fx-border-color: red");
+        }
+        btnAddEmployee.setDisable(true);
+    }
+
+    public void removeError(TextField txtCus) {
+        txtCus.getParent().setStyle("-fx-border-color: green");
+        btnAddEmployee.setDisable(false);
+    }
+
+
+
 
     public void btnEmployeeReportOnAction(ActionEvent actionEvent) {
     }
