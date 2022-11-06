@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import model.BookingCustomer;
@@ -85,7 +86,7 @@ public class AddEmployeeFromController {
         tblEmployee.setItems(obList);
     }
 
-    public void btnAddEmployeeOnAction(ActionEvent actionEvent) {
+    public void btnAddEmployeeOnAction() {
         Employee e=new Employee(
                 txtEmpId.getText(),txtEmpName.getText(),txtEmpAddress.getText(),txtEmpAge.getText(),txtEmpTel.getText(),txtEmpSalary.getText()
         );
@@ -93,6 +94,7 @@ public class AddEmployeeFromController {
         try {
             if(CrudUtil.executeUpdate("INSERT INTO employee VALUES(?,?,?,?,?,?)",e.getId(),e.getName(),e.getAddress(),e.getAge(),e.getContact(),e.getSalary())){
                 new Alert(Alert.AlertType.CONFIRMATION, "Saved!..").show();
+
             }else {
                 new Alert(Alert.AlertType.WARNING, "Not Saved!..").show();
             }
@@ -155,6 +157,18 @@ public class AddEmployeeFromController {
     }
 
     public void textFields_Key_Releaseed(KeyEvent keyEvent) {
+        Validation();
+
+        if (keyEvent.getCode() == KeyCode.ENTER) {
+            Object responds = Validation();
+
+            if (responds instanceof TextField) {
+                TextField textField = (TextField) responds;
+                textField.requestFocus();
+            } else {
+                btnAddEmployeeOnAction();
+            }
+        }
     }
 
     private Object Validation() {
