@@ -81,7 +81,15 @@ public class AddTrainFromController {
 
     }
 
+
+
     public void btnclearOnAction(ActionEvent actionEvent) {
+        txtTrainId.clear();
+        txtTrainName.clear();
+        txtStartTime.clear();
+        txtEndTime.clear();
+        cmbTrainFrom.getSelectionModel().clearSelection();
+        cmbTrainTo.getSelectionModel().clearSelection();
     }
 
     public void btnEmployeeReportOnAction(ActionEvent actionEvent) {
