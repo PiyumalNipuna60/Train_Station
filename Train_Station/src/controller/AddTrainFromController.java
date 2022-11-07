@@ -191,6 +191,17 @@ public class AddTrainFromController {
         return true;
     }
 
+    private void removeError(TextField text) {
+        text.getParent().setStyle("-fx-border-color: green");
+        btnAddTrain.setDisable(false);
+    }
+
+    private void addError(TextField text) {
+        if (text.getText().length() > 0) {
+            text.getParent().setStyle("-fx-border-color: red");
+        }
+        btnAddTrain.setDisable(true);
+    }
 
     public void btnEmployeeReportOnAction(ActionEvent actionEvent) {
     }
