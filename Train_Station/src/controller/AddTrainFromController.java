@@ -5,7 +5,6 @@ import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 
 public class AddTrainFromController {
-
     public ComboBox cmbTrainTo;
     public ComboBox cmbTrainFrom;
     public TextField txtTrainId;
@@ -23,6 +22,7 @@ public class AddTrainFromController {
 
 
     public void btnAddTrainOnAction(ActionEvent actionEvent) {
+
     }
 
     public void txtSearchOnAction(ActionEvent actionEvent) {
