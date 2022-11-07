@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import model.Train;
 import util.CrudUtil;
@@ -111,7 +112,7 @@ public class AddTrainFromController {
     }
 
 
-    public void btnAddTrainOnAction(ActionEvent actionEvent) {
+    public void btnAddTrainOnAction() {
         Train t1 = new Train(
                 txtTrainId.getText(), txtTrainName.getText(), txtStartTime.getText(), txtEndTime.getText(), String.valueOf(cmbTrainFrom.getValue()), String.valueOf(cmbTrainTo.getValue())
         );
@@ -176,7 +177,18 @@ public class AddTrainFromController {
     }
 
     public void textFields_Key_Released(KeyEvent keyEvent) {
+        Validation();
 
+        if (keyEvent.getCode() == KeyCode.ENTER) {
+            Object responds = Validation();
+
+            if (responds instanceof TextField) {
+                TextField textField = (TextField) responds;
+                textField.requestFocus();
+            } else {
+                btnAddTrainOnAction();
+            }
+        }
     }
 
     private Object Validation() {
@@ -202,6 +214,8 @@ public class AddTrainFromController {
         }
         btnAddTrain.setDisable(true);
     }
+
+
 
     public void btnEmployeeReportOnAction(ActionEvent actionEvent) {
     }

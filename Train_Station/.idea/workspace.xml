@@ -21,8 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="45208517-7dbb-42d9-9fa4-451aa42eef4c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/AddTrainFromController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Train_Station/controller/AddTrainFromController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/AddTrainFromController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AddTrainFromController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +117,7 @@
       <workItem from="1667813839930" duration="716000" />
       <workItem from="1667827166970" duration="1789000" />
       <workItem from="1667829015282" duration="1791000" />
-      <workItem from="1667830828442" duration="343000" />
+      <workItem from="1667830828442" duration="644000" />
     </task>
     <servers />
   </component>
