@@ -11,6 +11,8 @@ import util.CrudUtil;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.LinkedHashMap;
+import java.util.regex.Pattern;
 
 public class AddTrainFromController {
     public ComboBox cmbTrainTo;
@@ -27,9 +29,15 @@ public class AddTrainFromController {
     public TableColumn colTrainName;
     public TableColumn colTrainStartTime;
     public TableColumn colTrainEndTime;
+    LinkedHashMap<TextField, Pattern> map = new LinkedHashMap<>();
 
     public void initialize() {
         uploadComboBox();
+
+        Pattern pattenId = Pattern.compile("^(T00-)[0-9]{3,5}$");
+        Pattern pattenName = Pattern.compile("^[A-z ]{3,}$");
+        Pattern patternStartTime = Pattern.compile("^([01]?[0-9]|2[0-3]).[0-5][0-9]$");
+        Pattern pattenEndTime = Pattern.compile("^([01]?[0-9]|2[0-3]).[0-5][0-9]$");
 
 
         colTrainId.setCellValueFactory(new PropertyValueFactory<>("trainId"));
@@ -163,6 +171,7 @@ public class AddTrainFromController {
     }
 
     public void textFields_Key_Released(KeyEvent keyEvent) {
+
     }
 
 
