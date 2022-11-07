@@ -39,6 +39,11 @@ public class AddTrainFromController {
         Pattern patternStartTime = Pattern.compile("^([01]?[0-9]|2[0-3]).[0-5][0-9]$");
         Pattern pattenEndTime = Pattern.compile("^([01]?[0-9]|2[0-3]).[0-5][0-9]$");
 
+        map.put(txtTrainId, pattenId);
+        map.put(txtTrainName, pattenName);
+        map.put(txtStartTime, patternStartTime);
+        map.put(txtEndTime, pattenEndTime);
+
 
         colTrainId.setCellValueFactory(new PropertyValueFactory<>("trainId"));
         colTrainName.setCellValueFactory(new PropertyValueFactory<>("trainName"));
@@ -172,6 +177,18 @@ public class AddTrainFromController {
 
     public void textFields_Key_Released(KeyEvent keyEvent) {
 
+    }
+
+    private Object Validation() {
+        for (TextField key : map.keySet()) {
+            Pattern pattern = map.get(key);
+            if (!pattern.matcher(key.getText()).matches()) {
+                addError(key);
+                return key;
+            } else
+                removeError(key);
+        }
+        return true;
     }
 
 
