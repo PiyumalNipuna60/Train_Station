@@ -47,6 +47,18 @@ public class AddTrainFromController {
 
         try {
             Train t1=searchTrain(txtTrainId.getText());
+
+            if (t1!=null){
+                txtTrainId.setText(t1.getTrainId());
+                txtTrainName.setText(t1.getTrainName());
+                txtStartTime.setText(t1.getStartTime());
+                txtEndTime.setText(t1.getEndTime());
+                cmbTrainFrom.setValue(t1.getTrainFrom());
+                cmbTrainTo.setValue(t1.getTrainTo());
+            }else {
+
+            }
+
         } catch (SQLException | ClassNotFoundException x) {
             x.printStackTrace();
         }
