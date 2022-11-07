@@ -30,6 +30,29 @@ public class AddTrainFromController {
     public void initialize() {
         uploadComboBox();
 
+        try {
+            loadTables();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private void loadTables() throws SQLException, ClassNotFoundException {
+        ResultSet resultSet = CrudUtil.executeQuery("SELECT * FROM train");
+        ObservableList<Train> obList = FXCollections.observableArrayList();
+        while (resultSet.next()) {
+    obList.add(
+      new Train(
+              resultSet.getString("trainId"),
+              resultSet.getString("trainName"),
+              resultSet.getString("startTime"),
+              resultSet.getString("endTime"),
+              resultSet.getString("trainFrom"),
+              resultSet.getString("trainTo")
+      ));
+        }
+
     }
 
     private void uploadComboBox() {
