@@ -1,5 +1,7 @@
 package controller;
 
+import com.mysql.cj.x.protobuf.MysqlxDatatypes;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
@@ -25,6 +27,32 @@ public class AddTrainFromController {
     public TableColumn colTrainName;
     public TableColumn colTrainStartTime;
     public TableColumn colTrainEndTime;
+
+    public void initialize() {
+        uploadComboBox();
+
+    }
+
+    private void uploadComboBox() {
+        comboTrainFrom();
+        comboTrainTo();
+
+    }
+
+    private void comboTrainFrom() {
+        try {
+            ResultSet resultSet = CrudUtil.executeQuery("SELECT * FROM station ORDER BY name ASC");
+            ObservableList obList = FXCollections.observableArrayList();
+
+            while (resultSet.next()){
+                obList.add(new String(resultSet.getString(2)));
+            }
+
+        } catch (SQLException | ClassNotFoundException X) {
+            X.printStackTrace();
+        }
+
+    }
 
 
     public void btnAddTrainOnAction(ActionEvent actionEvent) {
@@ -81,8 +109,6 @@ public class AddTrainFromController {
 
     }
 
-
-
     public void btnclearOnAction(ActionEvent actionEvent) {
         txtTrainId.clear();
         txtTrainName.clear();
@@ -92,9 +118,11 @@ public class AddTrainFromController {
         cmbTrainTo.getSelectionModel().clearSelection();
     }
 
-    public void btnEmployeeReportOnAction(ActionEvent actionEvent) {
+    public void textFields_Key_Released(KeyEvent keyEvent) {
     }
 
-    public void textFields_Key_Released(KeyEvent keyEvent) {
+
+
+    public void btnEmployeeReportOnAction(ActionEvent actionEvent) {
     }
 }
