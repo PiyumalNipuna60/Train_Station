@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import model.Train;
 import util.CrudUtil;
@@ -30,6 +31,14 @@ public class AddTrainFromController {
     public void initialize() {
         uploadComboBox();
 
+
+        colTrainId.setCellValueFactory(new PropertyValueFactory<>("trainId"));
+        colTrainName.setCellValueFactory(new PropertyValueFactory<>("trainName"));
+        colTrainStartTime.setCellValueFactory(new PropertyValueFactory<>("startTime"));
+        colTrainEndTime.setCellValueFactory(new PropertyValueFactory<>("EndTime"));
+        colTrainFrom.setCellValueFactory(new PropertyValueFactory<>("trainFrom"));
+        colTrainTo.setCellValueFactory(new PropertyValueFactory<>("trainTo"));
+
         try {
             loadTables();
         } catch (SQLException | ClassNotFoundException e) {
@@ -52,6 +61,7 @@ public class AddTrainFromController {
               resultSet.getString("trainTo")
       ));
         }
+        tblAllTrain.setItems(obList);
 
     }
 
@@ -96,6 +106,7 @@ public class AddTrainFromController {
         try {
             if (CrudUtil.executeUpdate("INSERT INTO train VALUES (?,?,?,?,?,?)", t1.getTrainId(), t1.getTrainName(), t1.getStartTime(), t1.getEndTime(), t1.getTrainFrom(), t1.getTrainTo())) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Add Train!..").show();
+                loadTables();
             } else {
                 new Alert(Alert.AlertType.WARNING, "Something wrong!..").show();
             }
