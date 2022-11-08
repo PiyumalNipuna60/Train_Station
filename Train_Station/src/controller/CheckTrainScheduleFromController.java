@@ -32,6 +32,28 @@ public class CheckTrainScheduleFromController {
     public TableColumn tblTrainEndStation;
     public TableColumn tblEndTime;
 
+    public void initialize() {
+        uploadComboBox();
+    }
+
+    private void uploadComboBox() {
+
+        try {
+            uploadFrom();
+            uploadTo();
+        } catch (SQLException | ClassNotFoundException cx) {
+            cx.printStackTrace();
+        }
+
+    }
+
+    private void uploadTo() throws SQLException, ClassNotFoundException {
+
+    }
+
+    private void uploadFrom() {
+    }
+
     public void btnSearchOnAction(ActionEvent actionEvent) {
         try {
             searchTrain(cmbTrainFrom.getValue(), cmbTrainTo.getValue());
