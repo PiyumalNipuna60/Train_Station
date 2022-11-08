@@ -129,9 +129,11 @@ public class CheckTrainScheduleFromController {
         tblTrainLoad.setItems(obList);
     }
 
-
     public void btnBackOnAction(ActionEvent actionEvent) {
+        ScheduleAnchorPane.getChildren().clear();
     }
+
+
 
     public void btnPrintOnAction(ActionEvent actionEvent) {
     }
