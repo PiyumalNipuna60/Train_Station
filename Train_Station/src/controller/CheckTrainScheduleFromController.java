@@ -9,7 +9,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
-import model.Train;
 import model.TrainSchedulCheck;
 import util.CrudUtil;
 
@@ -45,6 +44,34 @@ public class CheckTrainScheduleFromController {
         tblTrainStopTime.setCellValueFactory(new PropertyValueFactory("TrainStopTime"));
         tblTrainStartStation.setCellValueFactory(new PropertyValueFactory("TrainStartStation"));
         tblTrainEndStation.setCellValueFactory(new PropertyValueFactory("TrainEndStation"));
+
+        loadTableData();
+    }
+
+    private void loadTableData() {
+        try {
+            ResultSet resultSet = CrudUtil.executeQuery("SELECT * FROM  stationSchedule");
+            ObservableList<TrainSchedulCheck> obList = FXCollections.observableArrayList();
+
+            while (resultSet.next()) {
+                obList.add(
+                        new TrainSchedulCheck(
+                                resultSet.getString(1),
+                                resultSet.getString(2),
+                                resultSet.getString(3),
+                                resultSet.getString(4),
+                                resultSet.getString(5),
+                                resultSet.getString(6),
+                                resultSet.getString(7),
+                                resultSet.getString(8),
+                                resultSet.getString(9)
+                        ));
+            }
+            tblTrainLoad.setItems(obList);
+
+        } catch (SQLException | ClassNotFoundException x) {
+            x.printStackTrace();
+        }
     }
 
     private void uploadComboBox() {
@@ -59,16 +86,16 @@ public class CheckTrainScheduleFromController {
     private void uploadTo() throws SQLException, ClassNotFoundException {
         ResultSet resultSet = CrudUtil.executeQuery("SELECT * FROM station ORDER BY name ASC");
         ObservableList obList = FXCollections.observableArrayList();
-        while (resultSet.next()){
-            obList.add(new String(resultSet.getString(2)));
+        while (resultSet.next()) {
+            obList.add(resultSet.getString(2));
         }
         cmbTrainTo.setItems(obList);
     }
 
     private void uploadFrom() throws SQLException, ClassNotFoundException {
         ResultSet resultSet = CrudUtil.executeQuery("SELECT * FROM station ORDER BY name ASC");
-        ObservableList obList=FXCollections.observableArrayList();
-        while (resultSet.next()){
+        ObservableList obList = FXCollections.observableArrayList();
+        while (resultSet.next()) {
             obList.add(resultSet.getString(2));
         }
         cmbTrainFrom.setItems(obList);
@@ -88,15 +115,15 @@ public class CheckTrainScheduleFromController {
         while (resultSet.next()) {
             obList.add(
                     new TrainSchedulCheck(
-                    resultSet.getString(1),
-                    resultSet.getString(2),
-                    resultSet.getString(3),
-                    resultSet.getString(4),
-                    resultSet.getString(5),
-                    resultSet.getString(6),
-                    resultSet.getString(7),
-                    resultSet.getString(8),
-                    resultSet.getString(9)
+                            resultSet.getString(1),
+                            resultSet.getString(2),
+                            resultSet.getString(3),
+                            resultSet.getString(4),
+                            resultSet.getString(5),
+                            resultSet.getString(6),
+                            resultSet.getString(7),
+                            resultSet.getString(8),
+                            resultSet.getString(9)
                     ));
         }
         tblTrainLoad.setItems(obList);
