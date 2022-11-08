@@ -36,6 +36,15 @@ public class CheckTrainScheduleFromController {
     public void initialize() {
         uploadComboBox();
 
+        tblTrainFrom.setCellValueFactory(new PropertyValueFactory("From"));
+        tblTrainTo.setCellValueFactory(new PropertyValueFactory("To"));
+        tblTrainId.setCellValueFactory(new PropertyValueFactory("TrainId"));
+        tblTrainName.setCellValueFactory(new PropertyValueFactory("TrainName"));
+        tblTrainStartTime.setCellValueFactory(new PropertyValueFactory("StartTrainTime"));
+        tblEndTime.setCellValueFactory(new PropertyValueFactory("EndStationTime"));
+        tblTrainStopTime.setCellValueFactory(new PropertyValueFactory("TrainStopTime"));
+        tblTrainStartStation.setCellValueFactory(new PropertyValueFactory("TrainStartStation"));
+        tblTrainEndStation.setCellValueFactory(new PropertyValueFactory("TrainEndStation"));
     }
 
     private void uploadComboBox() {
