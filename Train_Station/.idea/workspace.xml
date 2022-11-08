@@ -21,6 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="45208517-7dbb-42d9-9fa4-451aa42eef4c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppInitialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppInitialize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/CheckTrainScheduleFromController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CheckTrainScheduleFromController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +119,7 @@
       <workItem from="1667827166970" duration="1789000" />
       <workItem from="1667829015282" duration="1791000" />
       <workItem from="1667830828442" duration="1346000" />
-      <workItem from="1667914324366" duration="315000" />
+      <workItem from="1667914324366" duration="834000" />
     </task>
     <servers />
   </component>

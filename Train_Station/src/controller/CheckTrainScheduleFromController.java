@@ -6,6 +6,11 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
+import model.Train;
+import util.CrudUtil;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class CheckTrainScheduleFromController {
     public AnchorPane ScheduleAnchorPane;
@@ -25,7 +30,11 @@ public class CheckTrainScheduleFromController {
     public TableColumn tblEndTime;
 
     public void btnSearchOnAction(ActionEvent actionEvent) {
+
     }
+
+
+
 
     public void btnBackOnAction(ActionEvent actionEvent) {
     }
