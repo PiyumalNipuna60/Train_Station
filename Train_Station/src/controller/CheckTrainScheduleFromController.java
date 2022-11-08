@@ -37,18 +37,21 @@ public class CheckTrainScheduleFromController {
     }
 
     private void uploadComboBox() {
-
         try {
             uploadFrom();
             uploadTo();
         } catch (SQLException | ClassNotFoundException cx) {
             cx.printStackTrace();
         }
-
     }
 
     private void uploadTo() throws SQLException, ClassNotFoundException {
-
+        ResultSet resultSet = CrudUtil.executeQuery("SELECT * FROM station ORDER BY name ASC");
+        ObservableList obList = FXCollections.observableArrayList();
+        while (resultSet.next()){
+            obList.add(new String(resultSet.getString(2)));
+        }
+        cmbTrainTo.setItems(obList);
     }
 
     private void uploadFrom() {
