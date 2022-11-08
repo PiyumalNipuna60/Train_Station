@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import model.Train;
 import model.TrainSchedulCheck;
@@ -34,6 +35,7 @@ public class CheckTrainScheduleFromController {
 
     public void initialize() {
         uploadComboBox();
+
     }
 
     private void uploadComboBox() {
@@ -54,7 +56,13 @@ public class CheckTrainScheduleFromController {
         cmbTrainTo.setItems(obList);
     }
 
-    private void uploadFrom() {
+    private void uploadFrom() throws SQLException, ClassNotFoundException {
+        ResultSet resultSet = CrudUtil.executeQuery("SELECT * FROM station ORDER BY name ASC");
+        ObservableList obList=FXCollections.observableArrayList();
+        while (resultSet.next()){
+            obList.add(resultSet.getString(2));
+        }
+        cmbTrainFrom.setItems(obList);
     }
 
     public void btnSearchOnAction(ActionEvent actionEvent) {
