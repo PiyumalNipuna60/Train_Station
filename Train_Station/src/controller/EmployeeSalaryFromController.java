@@ -65,6 +65,7 @@ public class EmployeeSalaryFromController {
     }
 
     public void btnBackOnAction(ActionEvent actionEvent) {
+        salaryAnchorPane.getChildren().clear();
     }
 
     public void btnPrintOnAction(ActionEvent actionEvent) {
