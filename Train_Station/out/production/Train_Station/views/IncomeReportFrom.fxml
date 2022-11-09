@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="incomeAnchorPane" prefHeight="656.0" prefWidth="1163.0" style="-fx-border-radius: 10px; -fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.IncomeReportFromController">
+   <children>
+      <ImageView fitHeight="674.0" fitWidth="1163.0" opacity="0.61" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/1000_F_296423009_OFShyxV6Mz6jnyUVEePkwWBzZ4hXuAh9.jpg" />
+         </image>
+      </ImageView>
+      <Label prefHeight="45.0" prefWidth="1163.0" style="-fx-background-color: #c5b368;" text="   All Income Report" textFill="#141414">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnBack" layoutX="965.0" layoutY="589.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="57.0" prefWidth="150.0" style="-fx-background-color: #55efc4; -fx-background-radius: 20;" text="Back">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblReport" layoutX="21.0" layoutY="92.0" prefHeight="491.0" prefWidth="572.0">
+         <columns>
+            <TableColumn fx:id="tblIncomeDate" prefWidth="182.0" text="Date" />
+            <TableColumn fx:id="tblIncome" minWidth="2.0" prefWidth="192.0" text="Income" />
+            <TableColumn fx:id="tblOption" prefWidth="194.0" text="Option" />
+         </columns>
+      </TableView>
+      <Label layoutX="932.0" layoutY="130.0" text="Monthly Income" />
+      <TextField fx:id="txtMonthlyIncome" layoutX="889.0" layoutY="160.0" prefHeight="45.0" prefWidth="195.0" promptText="1000.00" style="-fx-background-color: #fbe0e0;" />
+   </children>
+</AnchorPane>
