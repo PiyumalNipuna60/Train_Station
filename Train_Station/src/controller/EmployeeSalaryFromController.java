@@ -28,12 +28,12 @@ public class EmployeeSalaryFromController {
 
     public void initialize() {
 
-        tblEmpId.setCellValueFactory(new PropertyValueFactory<>(""));
-        tblEmpName
-        tblEmpAddress
-        tblEmpAge
-        tblEmpTel
-        tblEmpSalary
+        tblEmpId.setCellValueFactory(new PropertyValueFactory<>("id"));
+        tblEmpName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        tblEmpAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
+        tblEmpAge.setCellValueFactory(new PropertyValueFactory<>("age"));
+        tblEmpTel.setCellValueFactory(new PropertyValueFactory<>("contact"));
+        tblEmpSalary.setCellValueFactory(new PropertyValueFactory<>("salary"));
 
         try {
             loadTableData();
