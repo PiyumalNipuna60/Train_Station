@@ -1,5 +1,6 @@
 package controller;
 
+import db.DBConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -8,9 +9,11 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import model.BookingCustomer;
 import util.CrudUtil;
 
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -33,7 +36,6 @@ public class LoadAllCustomerBookingFromController {
     public TableColumn colDate;
 
     public void initialize() {
-
         colCusId.setCellValueFactory(new PropertyValueFactory("id"));
         colCusName.setCellValueFactory(new PropertyValueFactory("name"));
         colCusAddress.setCellValueFactory(new PropertyValueFactory("address"));
@@ -47,38 +49,36 @@ public class LoadAllCustomerBookingFromController {
         colCusPrice.setCellValueFactory(new PropertyValueFactory("price"));
         colDate.setCellValueFactory(new PropertyValueFactory("Date"));
 
-
-//        try {
-//            loadData();
-//        } catch (SQLException | ClassNotFoundException x) {
-//            x.printStackTrace();
-//        }
+        try {
+            loadAllBooking();
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
     }
-//
-//    private void loadData() throws SQLException, ClassNotFoundException {
-//        ResultSet resultSet = CrudUtil.executeQuery("SELECT * FROM booking");
-//        ObservableList<BookingCustomer> obList= FXCollections.observableArrayList();
-//        while (resultSet.next()){
-//            obList.add(
-//                    new BookingCustomer(
-//                            resultSet.getString(1),
-//                            resultSet.getString(2),
-//                            resultSet.getString(3),
-//                            resultSet.getString(4),
-//                            resultSet.getString(5),
-//                            resultSet.getString(6),
-//                            resultSet.getString(7),
-//                            resultSet.getString(8),
-//                            resultSet.getString(9),
-//                            resultSet.getString(10),
-//                            resultSet.getString(11),
-//                            resultSet.getString(12)
-//                    )
-//            );
-//
-//        }
-//        tblCustomerBooking.setItems(obList);
-//    }
+
+    private void loadAllBooking() throws ClassNotFoundException, SQLException {
+        ResultSet result = CrudUtil.executeQuery("SELECT * FROM booking");
+        ObservableList<BookingCustomer> obList = FXCollections.observableArrayList();
+        while (result.next()) {
+            obList.add(
+                    new BookingCustomer(
+                            result.getString("id"),
+                            result.getString("name"),
+                            result.getString("address"),
+                            result.getString("contact"),
+                            result.getString("trainFrom"),
+                            result.getString("trainTo"),
+                            result.getString("time"),
+                            result.getString("train"),
+                            result.getString("seatNo"),
+                            result.getString("class"),
+                            result.getString("price"),
+                            result.getString("Date")
+                    ));
+        }
+        tblCustomerBooking.setItems(obList);
+    }
+
 
     public void btnBackOnAction(ActionEvent actionEvent) {
         customerAnchorPane.getChildren().clear();
@@ -86,6 +86,4 @@ public class LoadAllCustomerBookingFromController {
 
     public void btnPrintOnAction(ActionEvent actionEvent) {
     }
-
-
 }
