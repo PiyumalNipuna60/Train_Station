@@ -24,6 +24,13 @@ public class LoadAllCustomerBookingFromController {
     public AnchorPane customerAnchorPane;
     public TableColumn colDate;
 
+    public void initialize() {
+        loadData();
+    }
+
+    private void loadData() {
+
+    }
 
     public void btnBackOnAction(ActionEvent actionEvent) {
         customerAnchorPane.getChildren().clear();
