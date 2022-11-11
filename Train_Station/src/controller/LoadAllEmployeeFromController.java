@@ -37,6 +37,7 @@ public class LoadAllEmployeeFromController {
 
 
     public void btnBackOnAction(ActionEvent actionEvent) {
+        employeeAnchorPane.getChildren().clear();
     }
 
     public void btnPrintOnAction(ActionEvent actionEvent) {
