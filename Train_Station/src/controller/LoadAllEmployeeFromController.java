@@ -10,9 +10,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
-import model.Employee;
 
-import util.CrudUtil;
 
 import java.io.IOException;
 import java.sql.*;
@@ -29,17 +27,22 @@ public class LoadAllEmployeeFromController {
     public TableColumn colEmpSalary;
     public AnchorPane employeeAnchorPane;
 
+    public void initialize() {
+
+    }
+
+
 
     public void btnUpdateOnAction(ActionEvent actionEvent) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("../views/ModifyEmployeeFrom.fxml"));
         employeeAnchorPane.getChildren().setAll(pane);
     }
 
-
     public void btnBackOnAction(ActionEvent actionEvent) {
         employeeAnchorPane.getChildren().clear();
     }
 
     public void btnPrintOnAction(ActionEvent actionEvent) {
+
     }
 }
