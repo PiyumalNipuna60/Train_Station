@@ -30,7 +30,12 @@ public class LoadAllEmployeeFromController {
     public AnchorPane employeeAnchorPane;
 
     public void initialize() {
-
+        colEmpId.setCellValueFactory(new PropertyValueFactory("id"));
+        colEmpName.setCellValueFactory(new PropertyValueFactory("name"));
+        colEmpAddress.setCellValueFactory(new PropertyValueFactory("address"));
+        colEmpAge.setCellValueFactory(new PropertyValueFactory("age"));
+        colEmpTel.setCellValueFactory(new PropertyValueFactory("contact"));
+        colEmpSalary.setCellValueFactory(new PropertyValueFactory("salary"));
 
         try {
             loadAllEmployee();
