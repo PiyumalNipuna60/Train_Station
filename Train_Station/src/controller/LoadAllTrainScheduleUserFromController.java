@@ -18,6 +18,7 @@ public class LoadAllTrainScheduleUserFromController {
 
 
     public void btnBackOnAction(ActionEvent actionEvent) {
+        AllEmployeeAnchorPane.getChildren().clear();
     }
 
     public void btnPrintOnAction(ActionEvent actionEvent) {
