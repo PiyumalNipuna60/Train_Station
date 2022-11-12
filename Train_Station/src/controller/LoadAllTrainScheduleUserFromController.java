@@ -26,7 +26,12 @@ public class LoadAllTrainScheduleUserFromController {
     public AnchorPane AllEmployeeAnchorPane;
 
     public void initialize() {
-
+        colTrainId.setCellValueFactory(new PropertyValueFactory("trainId"));
+        colTrainName.setCellValueFactory(new PropertyValueFactory("trainName"));
+        colTrainStartTime.setCellValueFactory(new PropertyValueFactory("startTime"));
+        colTrainEndTime.setCellValueFactory(new PropertyValueFactory("endTime"));
+        colTrainFrom.setCellValueFactory(new PropertyValueFactory("trainFrom"));
+        colTrainTo.setCellValueFactory(new PropertyValueFactory("trainTo"));
 
 
         try {
