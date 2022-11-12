@@ -16,6 +16,13 @@ public class LoadAllTrainScheduleUserFromController {
     public TableView tblAllTrain;
     public AnchorPane AllEmployeeAnchorPane;
 
+    public void initialize() {
+        loadTbaleData();
+    }
+
+    private void loadTbaleData() {
+
+    }
 
     public void btnBackOnAction(ActionEvent actionEvent) {
         AllEmployeeAnchorPane.getChildren().clear();
