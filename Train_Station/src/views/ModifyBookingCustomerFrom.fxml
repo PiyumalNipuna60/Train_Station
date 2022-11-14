@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="686.0" prefWidth="1163.0" style="-fx-border-radius: 10px; -fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyBookingCustomerFromController">
+   <children>
+      <Label prefHeight="45.0" prefWidth="1163.0" style="-fx-background-color: #c5b368;" text="   Modify Booking Train" textFill="#141414">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="643.0" fitWidth="1163.0" layoutY="45.0" opacity="0.29" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/sideways-woman-listening-music-train-platform.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnModifyBooking" layoutX="839.0" layoutY="302.0" mnemonicParsing="false" onAction="#btnModifyBookingOnAction" prefHeight="57.0" prefWidth="150.0" style="-fx-background-color: #55efc4; -fx-background-radius: 20;" text="Update Booking" />
+      <AnchorPane layoutX="34.0" layoutY="76.0" prefHeight="37.0" prefWidth="415.0" style="-fx-border-color: black; -fx-background-color: #ffffff; -fx-border-radius: 20; -fx-background-radius: 20;">
+         <children>
+            <TextField fx:id="txtCusId" layoutY="4.0" onAction="#txtSearchOnAction" onKeyReleased="#textFields_Key_Releaseed" prefHeight="33.0" prefWidth="415.0" promptText="C00-001" style="-fx-border-color: white; -fx-background-color: white; -fx-border-radius: 20px; -fx-background-radius: 20;" />
+            <Label layoutX="14.0" layoutY="-11.0" prefHeight="23.0" prefWidth="99.0" style="-fx-background-color: white; -fx-border-color: white;" text="  Customer Id">
+               <effect>
+                  <Blend mode="SRC_ATOP" />
+               </effect>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="34.0" layoutY="142.0" prefHeight="37.0" prefWidth="415.0" style="-fx-border-color: black; -fx-background-color: #ffffff; -fx-border-radius: 20; -fx-background-radius: 20;">
+         <children>
+            <TextField fx:id="txtCusName" layoutX="9.0" layoutY="4.0" onKeyReleased="#textFields_Key_Releaseed" prefHeight="33.0" prefWidth="406.0" promptText="Nipuna Piyumal" style="-fx-border-color: white; -fx-background-color: white; -fx-border-radius: 20px; -fx-background-radius: 20;" />
+            <Label layoutX="8.0" layoutY="-10.0" prefHeight="21.0" prefWidth="126.0" style="-fx-background-color: white;" text="  Customer Name">
+               <effect>
+                  <Blend mode="SRC_ATOP" />
+               </effect>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="34.0" layoutY="193.0" prefHeight="37.0" prefWidth="415.0" style="-fx-border-color: black; -fx-background-color: #ffffff; -fx-border-radius: 20; -fx-background-radius: 20;">
+         <children>
+            <TextField fx:id="txtCusAddress" layoutX="9.0" layoutY="4.0" onKeyReleased="#textFields_Key_Releaseed" prefHeight="33.0" prefWidth="406.0" promptText="Colombo 7" style="-fx-border-color: white; -fx-background-color: white; -fx-border-radius: 20px; -fx-background-radius: 20;" />
+            <Label layoutX="14.0" layoutY="-11.0" prefHeight="23.0" prefWidth="141.0" style="-fx-background-color: white; -fx-border-color: white;" text="  Customer Address">
+               <effect>
+                  <Blend mode="SRC_ATOP" />
+               </effect>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="35.0" layoutY="257.0" prefHeight="37.0" prefWidth="415.0" style="-fx-border-color: black; -fx-background-color: #ffffff; -fx-border-radius: 20; -fx-background-radius: 20;">
+         <children>
+            <TextField fx:id="txtCusContact" layoutX="13.0" layoutY="3.0" onKeyReleased="#textFields_Key_Releaseed" prefHeight="33.0" prefWidth="392.0" promptText="071-2425679" style="-fx-border-color: white; -fx-background-color: white; -fx-border-radius: 20px; -fx-background-radius: 20;" />
+            <Label layoutX="14.0" layoutY="-11.0" prefHeight="23.0" prefWidth="70.0" style="-fx-background-color: white; -fx-border-color: white;" text="contact">
+               <effect>
+                  <Blend mode="SRC_ATOP" />
+               </effect>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="542.0" layoutY="70.0" prefHeight="25.0" prefWidth="64.0" text="From   :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCusFrom" editable="true" layoutX="618.0" layoutY="65.0" prefWidth="150.0" promptText="    -SELECT-" visibleRowCount="26" />
+      <Label layoutX="536.0" layoutY="112.0" prefHeight="25.0" prefWidth="64.0" text="To         :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCusTo" editable="true" layoutX="618.0" layoutY="109.0" prefWidth="150.0" promptText="    -SELECT-" visibleRowCount="26" />
+      <Label layoutX="537.0" layoutY="161.0" prefHeight="25.0" prefWidth="57.0" text="Train   :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCusTrain" editable="true" layoutX="618.0" layoutY="158.0" prefWidth="150.0" promptText="    -SELECT-" visibleRowCount="5" />
+      <Label layoutX="940.0" layoutY="171.0" prefHeight="25.0" prefWidth="64.0" text="Prize">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCusPrice" layoutX="900.0" layoutY="120.0" onKeyReleased="#textFields_Key_Releaseed" prefHeight="45.0" prefWidth="113.0" promptText="     100.00">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Label layoutX="533.0" layoutY="212.0" prefHeight="25.0" prefWidth="79.0" text="Seat No  : ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCusSeatNo" editable="true" layoutX="618.0" layoutY="209.0" prefWidth="150.0" promptText="    -SELECT-" visibleRowCount="5" />
+      <Button fx:id="btnDeleteBooking" layoutX="839.0" layoutY="217.0" mnemonicParsing="false" onAction="#btnDeleteBookingOnAction" prefHeight="57.0" prefWidth="150.0" style="-fx-background-color: #55efc4; -fx-background-radius: 20;" text="Delete Booking" />
+      <Label layoutX="827.0" layoutY="70.0" prefHeight="25.0" prefWidth="64.0" text="Time   :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTrainTime" layoutX="891.0" layoutY="67.0" onKeyReleased="#textFields_Key_Releaseed" prefHeight="31.0" prefWidth="126.0" promptText="00.00" />
+      <Label layoutX="533.0" layoutY="263.0" prefHeight="25.0" prefWidth="79.0" text="Class  : ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCusClass" editable="true" layoutX="618.0" layoutY="260.0" prefWidth="150.0" promptText="    -SELECT-" visibleRowCount="3" />
+      <Separator layoutX="23.0" layoutY="380.0" prefHeight="0.0" prefWidth="1118.0" />
+      <TableView fx:id="tblCustomerBooking" layoutX="13.0" layoutY="396.0" prefHeight="265.0" prefWidth="1139.0">
+         <columns>
+            <TableColumn fx:id="colCusId" prefWidth="73.0" text="Cus Id" />
+            <TableColumn fx:id="colCusName" prefWidth="105.0" text="Cus Name" />
+            <TableColumn fx:id="colCusAddress" prefWidth="104.0" text="Address" />
+            <TableColumn fx:id="colCusTel" prefWidth="97.0" text="Tel" />
+            <TableColumn fx:id="colCusFrom" prefWidth="116.0" text="From" />
+            <TableColumn fx:id="colCusTo" prefWidth="111.0" text="To" />
+            <TableColumn fx:id="colCusTime" prefWidth="90.0" text="Time" />
+            <TableColumn fx:id="colCusTrain" prefWidth="119.0" text="Train" />
+            <TableColumn fx:id="colCusSeatNo" prefWidth="74.0" text="Seat No" />
+            <TableColumn fx:id="colCusClass" prefWidth="66.0" text="Class" />
+            <TableColumn fx:id="colCusPrice" prefWidth="84.0" text="price" />
+            <TableColumn fx:id="colCusDate" prefWidth="99.0" text="Date" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="35.0" layoutY="316.0" prefHeight="37.0" prefWidth="415.0" style="-fx-border-color: black; -fx-background-color: #ffffff; -fx-border-radius: 20; -fx-background-radius: 20;">
+         <children>
+            <TextField fx:id="txtDate" layoutX="7.0" layoutY="3.0" onKeyReleased="#textFields_Key_Releaseed" prefHeight="33.0" prefWidth="398.0" promptText="0000-00-00" style="-fx-border-color: white; -fx-background-color: white; -fx-border-radius: 20px; -fx-background-radius: 20;" />
+            <Label layoutX="14.0" layoutY="-11.0" prefHeight="23.0" prefWidth="57.0" style="-fx-background-color: white; -fx-border-color: white;" text=" Date">
+               <effect>
+                  <Blend mode="SRC_ATOP" />
+               </effect>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button layoutX="1068.0" layoutY="303.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="45.0" prefWidth="57.0" style="-fx-background-color: #81ecec; -fx-background-radius: 20;" text="Clear" />
+      <Button layoutX="1013.0" layoutY="218.0" mnemonicParsing="false" onAction="#btnPrintOnAction" prefHeight="45.0" prefWidth="141.0" style="-fx-background-color: #81ecec; -fx-background-radius: 20;" text="Print" />
+   </children>
+</AnchorPane>
