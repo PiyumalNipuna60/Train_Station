@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import model.BookingCustomer;
 import util.CrudUtil;
@@ -50,6 +51,19 @@ public class ModifyBookingCustomerFromController {
         uploadComboBox();
 
 
+        colCusId.setCellValueFactory(new PropertyValueFactory("id"));
+        colCusName.setCellValueFactory(new PropertyValueFactory("name"));
+        colCusAddress.setCellValueFactory(new PropertyValueFactory("address"));
+        colCusTel.setCellValueFactory(new PropertyValueFactory("contact"));
+        colCusFrom.setCellValueFactory(new PropertyValueFactory("trainFrom"));
+        colCusTo.setCellValueFactory(new PropertyValueFactory("trainTo"));
+        colCusTime.setCellValueFactory(new PropertyValueFactory("time"));
+        colCusTrain.setCellValueFactory(new PropertyValueFactory("train"));
+        colCusSeatNo.setCellValueFactory(new PropertyValueFactory("seatNo"));
+        colCusClass.setCellValueFactory(new PropertyValueFactory("class"));
+        colCusPrice.setCellValueFactory(new PropertyValueFactory("price"));
+        colCusDate.setCellValueFactory(new PropertyValueFactory("date"));
+
         try {
             loadTables();
         } catch (SQLException | ClassNotFoundException e) {
@@ -79,6 +93,7 @@ public class ModifyBookingCustomerFromController {
                     result.getString("date")
             ));
         }
+        tblCustomerBooking.setItems(obList);
 
     }
 
