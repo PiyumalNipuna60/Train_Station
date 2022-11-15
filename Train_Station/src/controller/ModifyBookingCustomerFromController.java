@@ -88,7 +88,7 @@ public class ModifyBookingCustomerFromController {
         ObservableList obList=FXCollections.observableArrayList();
         while (resultSet.next()){
             obList.add(
-                    new String(resultSet.getString(2))
+                    new String(resultSet.getString(9))
             );
         }
         cmbCusSeatNo.setItems(obList);
@@ -104,7 +104,13 @@ public class ModifyBookingCustomerFromController {
         cmbCusTrain.setItems(obList);
     }
 
-    private void comboTo() {
+    private void comboTo() throws SQLException, ClassNotFoundException {
+        ResultSet resultSet = CrudUtil.executeQuery("SELECT * FROM station");
+        ObservableList obList=FXCollections.observableArrayList();
+        while (resultSet.next()){
+            obList.add(new String(resultSet.getString(2)));
+        }
+        cmbCusTo.setItems(obList);
     }
 
     private void comboFrom() {
