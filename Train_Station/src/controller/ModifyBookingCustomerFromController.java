@@ -60,6 +60,32 @@ public class ModifyBookingCustomerFromController {
     }
 
     private void uploadComboBox() {
+        try {
+            comboFrom();
+            comboTo();
+            comboTrain();
+            comboSeatNo();
+            comboClass();
+        } catch (SQLException | ClassNotFoundException x) {
+            x.printStackTrace();
+        }
+    }
+
+    private void comboClass() {
+
+    }
+
+    private void comboSeatNo() {
+
+    }
+
+    private void comboTrain() {
+    }
+
+    private void comboTo() {
+    }
+
+    private void comboFrom() {
     }
 
 
