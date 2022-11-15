@@ -113,7 +113,13 @@ public class ModifyBookingCustomerFromController {
         cmbCusTo.setItems(obList);
     }
 
-    private void comboFrom() {
+    private void comboFrom() throws SQLException, ClassNotFoundException {
+        ResultSet resultSet = CrudUtil.executeQuery("SELECT * FROM station");
+        ObservableList obList=FXCollections.observableArrayList();
+        while (resultSet.next()){
+            obList.add(new String(resultSet.getString(2)));
+        }
+        cmbCusFrom.setItems(obList);
     }
 
 
