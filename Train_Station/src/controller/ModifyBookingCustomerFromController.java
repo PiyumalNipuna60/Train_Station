@@ -8,6 +8,8 @@ import util.CrudUtil;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.LinkedHashMap;
+import java.util.regex.Pattern;
 
 public class ModifyBookingCustomerFromController {
 
@@ -38,6 +40,27 @@ public class ModifyBookingCustomerFromController {
     public TableColumn colCusPrice;
     public TableColumn colCusDate;
     public TextField txtDate;
+
+    LinkedHashMap<TextField, Pattern> map = new LinkedHashMap<>();
+
+
+    public void initialize() {
+        uploadComboBox();
+
+
+        try {
+            loadTables();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void loadTables() {
+
+    }
+
+    private void uploadComboBox() {
+    }
 
 
     public void btnModifyBookingOnAction(ActionEvent actionEvent) {
