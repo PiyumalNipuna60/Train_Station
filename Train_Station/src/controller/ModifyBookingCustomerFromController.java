@@ -50,14 +50,35 @@ public class ModifyBookingCustomerFromController {
         uploadComboBox();
 
 
-//        try {
-//            loadTables();
-//        } catch (SQLException | ClassNotFoundException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            loadTables();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
-    private void loadTables() {
+    private void loadTables() throws SQLException, ClassNotFoundException {
+        ResultSet result = CrudUtil.executeQuery("SELECT*FROM booking");
+        ObservableList<BookingCustomer> obList = FXCollections.observableArrayList();
+
+        while (result.next()){
+
+            obList.add(
+            new BookingCustomer(
+                    result.getString("id"),
+                    result.getString("name"),
+                    result.getString("address"),
+                    result.getString("contact"),
+                    result.getString("trainFrom"),
+                    result.getString("trainTo"),
+                    result.getString("time"),
+                    result.getString("train"),
+                    result.getString("seatNo"),
+                    result.getString("class"),
+                    result.getString("price"),
+                    result.getString("date")
+            ));
+        }
 
     }
 
@@ -135,6 +156,7 @@ public class ModifyBookingCustomerFromController {
                     c.getName(), c.getAddress(), c.getContact(), c.getTrainFrom(), c.getTrainTo(), c.getTime(), c.getTrain(), c.getSeatNo(), c.getClass(), c.getPrice(), c.getDate(), c.getId())) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Updated!").show();
 //                    loadAllBooking();
+
             } else {
                 new Alert(Alert.AlertType.WARNING, "Try Again!").show();
             }
