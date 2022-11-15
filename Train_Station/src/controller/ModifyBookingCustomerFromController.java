@@ -1,7 +1,5 @@
 package controller;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
@@ -43,12 +41,32 @@ public class ModifyBookingCustomerFromController {
 
 
     public void btnModifyBookingOnAction(ActionEvent actionEvent) {
+        BookingCustomer c = new BookingCustomer(
+                txtCusId.getText(), txtCusName.getText(), txtCusAddress.getText(), txtCusContact.getText(),
+                String.valueOf(cmbCusFrom.getValue()), String.valueOf(cmbCusTo.getValue()), txtTrainTime.getText(),
+                String.valueOf(cmbCusTrain.getValue()), String.valueOf(cmbCusSeatNo.getValue()),
+                String.valueOf(cmbCusClass.getValue()), txtCusPrice.getText(), txtDate.getText()
+        );
+        try {
+            if (CrudUtil.executeUpdate("UPDATE booking SET name=?,address=?,contact=?,trainFrom=?, trainTo=?, time=?, train=?, seatNo=?, class=?, price=?,date=?  WHERE id=?",
+                    c.getName(), c.getAddress(), c.getContact(), c.getTrainFrom(), c.getTrainTo(), c.getTime(), c.getTrain(), c.getSeatNo(), c.getClass(), c.getPrice(), c.getDate(), c.getId())) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Updated!").show();
+//                    loadAllBooking();
+            } else {
+                new Alert(Alert.AlertType.WARNING, "Try Again!").show();
+            }
+
+
+        } catch (SQLException | ClassNotFoundException z) {
+            z.printStackTrace();
+            new Alert(Alert.AlertType.ERROR, z.getMessage()).show();
+        }
     }
 
     public void txtSearchOnAction(ActionEvent actionEvent) {
         try {
-            BookingCustomer b=searchingBooking(txtCusId.getText());
-            if (b!=null){
+            BookingCustomer b = searchingBooking(txtCusId.getText());
+            if (b != null) {
                 txtCusId.setText(b.getId());
                 txtCusName.setText(b.getName());
                 txtCusAddress.setText(b.getAddress());
@@ -61,7 +79,7 @@ public class ModifyBookingCustomerFromController {
                 cmbCusClass.setValue(b.getTrainClass());
                 txtCusPrice.setText(b.getPrice());
                 txtDate.setText(b.getDate());
-            }else {
+            } else {
                 new Alert(Alert.AlertType.WARNING, "Empty values!..").show();
             }
         } catch (SQLException | ClassNotFoundException x) {
@@ -73,20 +91,20 @@ public class ModifyBookingCustomerFromController {
         ResultSet resultSet = CrudUtil.executeQuery("SELECT * FROM booking WHERE id=?", text);
 
 
-        if (resultSet.next()){
-                   return new BookingCustomer(
-                           resultSet.getString(1),
-                           resultSet.getString(2),
-                           resultSet.getString(3),
-                           resultSet.getString(4),
-                           resultSet.getString(5),
-                           resultSet.getString(6),
-                           resultSet.getString(7),
-                           resultSet.getString(8),
-                           resultSet.getString(9),
-                           resultSet.getString(10),
-                           resultSet.getString(11),
-                           resultSet.getString(12)
+        if (resultSet.next()) {
+            return new BookingCustomer(
+                    resultSet.getString(1),
+                    resultSet.getString(2),
+                    resultSet.getString(3),
+                    resultSet.getString(4),
+                    resultSet.getString(5),
+                    resultSet.getString(6),
+                    resultSet.getString(7),
+                    resultSet.getString(8),
+                    resultSet.getString(9),
+                    resultSet.getString(10),
+                    resultSet.getString(11),
+                    resultSet.getString(12)
             );
         }
         return null;
