@@ -1,5 +1,7 @@
 package controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
@@ -72,7 +74,13 @@ public class ModifyBookingCustomerFromController {
     }
 
     private void comboClass() {
+        ObservableList obList= FXCollections.observableArrayList();
+        obList.add("1");
+        obList.add("2");
+        obList.add("3");
+        obList.add("A/C");
 
+        cmbCusClass.setItems(obList);
     }
 
     private void comboSeatNo() {
