@@ -233,8 +233,6 @@ public class ModifyBookingCustomerFromController {
         return null;
     }
 
-
-
     public void btnDeleteBookingOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
         Boolean isTrue = CrudUtil.executeUpdate("delete from booking WHERE id=?", txtCusId.getText());
         if (isTrue){
@@ -247,6 +245,22 @@ public class ModifyBookingCustomerFromController {
     }
 
     public void btnClearOnAction(ActionEvent actionEvent) {
+       clear();
+    }
+
+    public void clear() {
+        txtCusId.clear();
+        txtCusName.clear();
+        txtCusAddress.clear();
+        txtCusContact.clear();
+        cmbCusFrom.getSelectionModel().clearSelection();
+        cmbCusTo.getSelectionModel().clearSelection();
+        txtTrainTime.clear();
+        cmbCusTrain.getSelectionModel().clearSelection();
+        cmbCusSeatNo.getSelectionModel().clearSelection();
+        cmbCusClass.getSelectionModel().clearSelection();
+        txtCusPrice.clear();
+        txtDate.clear();
     }
 
     public void btnPrintOnAction(ActionEvent actionEvent) {
