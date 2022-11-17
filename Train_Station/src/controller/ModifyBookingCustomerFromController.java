@@ -95,6 +95,9 @@ public class ModifyBookingCustomerFromController {
         }
         tblCustomerBooking.setItems(obList);
 
+        int y=10;
+        String x=String.valueOf(y);
+
     }
 
     private void uploadComboBox() {
@@ -230,7 +233,17 @@ public class ModifyBookingCustomerFromController {
         return null;
     }
 
-    public void btnDeleteBookingOnAction(ActionEvent actionEvent) {
+
+
+    public void btnDeleteBookingOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
+        Boolean isTrue = CrudUtil.executeUpdate("delete from booking WHERE id=?", txtCusId.getText());
+        if (isTrue){
+            new Alert(Alert.AlertType.CONFIRMATION, "Deleted!").show();
+            loadTables();
+        }else {
+            new Alert(Alert.AlertType.WARNING, "Try Again!").show();
+        }
+
     }
 
     public void btnClearOnAction(ActionEvent actionEvent) {
