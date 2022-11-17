@@ -50,6 +50,21 @@ public class ModifyBookingCustomerFromController {
     public void initialize() {
         uploadComboBox();
 
+        Pattern patternId = Pattern.compile("^(C00-)[0-9]{3,5}$");
+        Pattern patternName = Pattern.compile("^[A-z ]{3,}$");
+        Pattern patternAddress = Pattern.compile("^[A-z0-9 ,/]{5,}$");
+        Pattern patternContact = Pattern.compile("^(071|072|077|076|078|075)[0-9]{7}$");
+        Pattern patternTime = Pattern.compile("^([01]?[0-9]|2[0-3]).[0-5][0-9]$");
+        Pattern patternPrice = Pattern.compile("^[1-9][0-9]*(.[0-9]{2})?$");
+
+        map.put(txtCusId,patternId);
+        map.put(txtCusName,patternName);
+        map.put(txtCusAddress,patternAddress);
+        map.put(txtCusContact,patternContact);
+        map.put(txtTrainTime,patternTime);
+        map.put(txtCusPrice,patternPrice);
+
+
 
         colCusId.setCellValueFactory(new PropertyValueFactory("id"));
         colCusName.setCellValueFactory(new PropertyValueFactory("name"));
@@ -263,9 +278,16 @@ public class ModifyBookingCustomerFromController {
         txtDate.clear();
     }
 
+    public void textFields_Key_Releaseed(KeyEvent keyEvent) {
+        validate();
+    }
+
+    private void validate() {
+        for ()
+    }
+
+
     public void btnPrintOnAction(ActionEvent actionEvent) {
     }
 
-    public void textFields_Key_Releaseed(KeyEvent keyEvent) {
-    }
 }
