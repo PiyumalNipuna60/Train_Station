@@ -282,8 +282,29 @@ public class ModifyBookingCustomerFromController {
         validate();
     }
 
-    private void validate() {
-        for ()
+    private Object validate() {
+        for (TextField key : map.keySet()){
+            Pattern pattern=map.get(key);
+            if (!pattern.matcher(key.getText()).matches()){
+                addError(key);
+                return key;
+            }else {
+                removeError(key);
+            }
+        }
+        return true;
+    }
+
+    private void removeError(TextField key) {
+        key.getParent().setStyle("-fx-border-color: green");
+        btnModifyBooking.setDisable(false);
+    }
+
+    private void addError(TextField text) {
+        if (text.getText().length() > 0) {
+            text.getParent().setStyle("-fx-border-color: red");
+        }
+        btnModifyBooking.setDisable(true);
     }
 
 
