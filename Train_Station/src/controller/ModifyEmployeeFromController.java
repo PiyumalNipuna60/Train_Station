@@ -54,8 +54,6 @@ public class ModifyEmployeeFromController {
         txtEmpTel.clear();
     }
 
-    public void textFields_Key_Releaseed(KeyEvent keyEvent) {
-    }
 
     public void txtSearchOnAction(ActionEvent actionEvent) {
         try {
@@ -92,8 +90,23 @@ public class ModifyEmployeeFromController {
     }
 
     public void btnUpdateEmployeeOnAction(ActionEvent actionEvent) {
+        Employee c=new Employee(
+                txtEmpId.getText(),txtEmpName.getText(),txtEmpAddress.getText(),txtEmpAge.getText(),txtEmpSalary.getText(),txtEmpTel.getText()
+        );
+        try {
+            if (CrudUtil.executeUpdate("UPDATE employee SET name=? ,address=? ,age=? ,contact=? ,salary=?  WHERE id= ?",
+                    c.getName(),c.getAddress(),c.getAge(),c.getContact(),c.getSalary(),c.getId())) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Updated!").show();
+            } else {
+                new Alert(Alert.AlertType.WARNING, "Try Again!").show();
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
+    public void textFields_Key_Releaseed(KeyEvent keyEvent) {
+    }
 
 
     public void btnEmployeeReportOnAction(ActionEvent actionEvent) {
