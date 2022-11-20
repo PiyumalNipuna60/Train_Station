@@ -40,10 +40,18 @@ public class ModifyEmployeeFromController {
         }
     }
 
-    public void btnEmployeeReportOnAction(ActionEvent actionEvent) {
-    }
 
     public void btnclearOnAction(ActionEvent actionEvent) {
+        clearMethod();
+    }
+
+    private void clearMethod() {
+        txtEmpId.clear();
+        txtEmpName.clear();
+        txtEmpAddress.clear();
+        txtEmpAge.clear();
+        txtEmpSalary.clear();
+        txtEmpTel.clear();
     }
 
     public void textFields_Key_Releaseed(KeyEvent keyEvent) {
@@ -84,5 +92,10 @@ public class ModifyEmployeeFromController {
     }
 
     public void btnUpdateEmployeeOnAction(ActionEvent actionEvent) {
+    }
+
+
+
+    public void btnEmployeeReportOnAction(ActionEvent actionEvent) {
     }
 }
