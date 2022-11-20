@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginDashBordFormController">
+   <children>
+      <ImageView fitHeight="462.0" fitWidth="700.0" layoutY="-56.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assets/21653.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutY="-3.0" prefHeight="56.0" prefWidth="700.0" style="-fx-background-color: #c5b368;" text="   Train Station" textFill="#141414">
+         <font>
+            <Font name="System Bold Italic" size="32.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnUser" layoutX="391.0" layoutY="142.0" mnemonicParsing="false" onAction="#btnUserLoginOnAction" prefHeight="56.0" prefWidth="217.0" style="-fx-background-color: #67ea67;" text="User">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.13106796116504854">
+               <stops>
+                  <Stop color="#222120" />
+                  <Stop color="#171613" offset="0.996732026143791" />
+                  <Stop color="#171716" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnAdmin" layoutX="391.0" layoutY="240.0" mnemonicParsing="false" onAction="#btnAdminLoginOnAction" prefHeight="56.0" prefWidth="217.0" style="-fx-background-color: #67ea67;" text="Admin">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.13106796116504854">
+               <stops>
+                  <Stop color="#222120" />
+                  <Stop color="#171613" offset="0.996732026143791" />
+                  <Stop color="#171716" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblRealTime" layoutX="68.0" layoutY="173.0" lineSpacing="10.0" prefHeight="127.0" prefWidth="240.0" style="-fx-background-color: #badc58; -fx-border-color: #130f40; -fx-border-radius: 20; -fx-background-radius: 20;" text=" 00.00.00" textAlignment="RIGHT" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRealDate" layoutX="68.0" layoutY="142.0" lineSpacing="10.0" prefHeight="31.0" prefWidth="227.0" style="-fx-background-color: #badc58; -fx-border-color: #130f40; -fx-border-radius: 20; -fx-background-radius: 20;" text="00.00.00" textAlignment="RIGHT" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font name="Bodoni MT Black Italic" size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnSignIn" layoutX="608.0" layoutY="6.0" mnemonicParsing="false" onAction="#btnSignInOnAction" prefHeight="39.0" prefWidth="84.0" style="-fx-background-color: #c5b368;" text="Sign In" textFill="#1b07f5">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

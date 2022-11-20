@@ -28,7 +28,16 @@ public class ModifyEmployeeFromController {
     public TableColumn colEmpSalary;
 
 
-    public void btnDeleteEmployeeOnAction(ActionEvent actionEvent) {
+    public void btnDeleteEmployeeOnAction(ActionEvent actionEvent){
+        try {
+            if (CrudUtil.executeUpdate("DELETE FROM employee WHERE id=?", txtEmpId.getText())) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Delete Employee..!").show();
+            } else {
+                new Alert(Alert.AlertType.WARNING, "Something Wrong..!").show();
+            }
+        } catch (SQLException | ClassNotFoundException x) {
+            x.printStackTrace();
+        }
     }
 
     public void btnEmployeeReportOnAction(ActionEvent actionEvent) {
@@ -42,11 +51,11 @@ public class ModifyEmployeeFromController {
 
     public void txtSearchOnAction(ActionEvent actionEvent) {
         try {
-            Employee e1=searchMethod(txtEmpId.getText());
+            Employee e1 = searchMethod(txtEmpId.getText());
 
-            if (e1.equals(null)){
-                new Alert(Alert.AlertType.WARNING,"Empty Result..!").show();
-            }else{
+            if (e1.equals(null)) {
+                new Alert(Alert.AlertType.WARNING, "Empty Result..!").show();
+            } else {
                 txtEmpId.setText(e1.getId());
                 txtEmpName.setText(e1.getName());
                 txtEmpAddress.setText(e1.getAddress());
@@ -62,7 +71,7 @@ public class ModifyEmployeeFromController {
 
     private Employee searchMethod(String empID) throws SQLException, ClassNotFoundException {
         ResultSet resultSet = CrudUtil.executeQuery("SELECT * FROM employee WHERE ID=?", empID);
-        while (resultSet.next()){
+        while (resultSet.next()) {
             return new Employee(
                     resultSet.getString(1),
                     resultSet.getString(2),

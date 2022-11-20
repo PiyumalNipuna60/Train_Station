@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="employeeAnchorPane" prefHeight="673.0" prefWidth="1163.0" style="-fx-border-radius: 10px; -fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoadAllEmployeeFromController">
+   <children>
+      <ImageView fitHeight="674.0" fitWidth="1163.0" opacity="0.61" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/1000_F_296423009_OFShyxV6Mz6jnyUVEePkwWBzZ4hXuAh9.jpg" />
+         </image>
+      </ImageView>
+      <Label prefHeight="45.0" prefWidth="1163.0" style="-fx-background-color: #c5b368;" text="   All Employee" textFill="#141414">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblEmployee" layoutX="48.0" layoutY="92.0" prefHeight="491.0" prefWidth="1067.0">
+         <columns>
+            <TableColumn fx:id="colEmpId" prefWidth="141.0" text="Emp Id" />
+            <TableColumn fx:id="colEmpName" prefWidth="209.0" text="Employee Name" />
+            <TableColumn fx:id="colEmpAddress" prefWidth="225.0" text="Employee Address" />
+            <TableColumn fx:id="colEmpAge" prefWidth="113.0" text="Age" />
+            <TableColumn fx:id="colEmpTel" prefWidth="195.0" text="Tel" />
+            <TableColumn fx:id="colEmpSalary" prefWidth="183.0" text="Emp Salary" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnUpdate" layoutX="965.0" layoutY="595.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="57.0" prefWidth="150.0" style="-fx-background-color: #55efc4; -fx-background-radius: 20;" text="Update">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnBack" layoutX="792.0" layoutY="595.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="57.0" prefWidth="150.0" style="-fx-background-color: #55efc4; -fx-background-radius: 20; -fx-border-color: BLACK; -fx-border-radius: 20;" text="Back">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="48.0" layoutY="601.0" mnemonicParsing="false" onAction="#btnPrintOnAction" prefHeight="45.0" prefWidth="259.0" style="-fx-background-color: #81ecec; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20;" text="Print All Employee">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
