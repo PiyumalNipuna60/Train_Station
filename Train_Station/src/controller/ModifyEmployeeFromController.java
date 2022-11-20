@@ -51,20 +51,19 @@ public class ModifyEmployeeFromController {
 
     public void txtSearchOnAction(ActionEvent actionEvent) {
         try {
-            Employee e1 = searchMethod(txtEmpId.getText());
+            ResultSet result = CrudUtil.executeQuery("SELECT * FROM employee WHERE id=?",txtEmpId.getText());
+            if (result.next()) {
+                txtEmpName.setText(result.getString(2));
+                txtEmpAddress.setText(result.getString(3));
+                txtEmpAge.setText(result.getString(4));
+                txtEmpTel.setText(result.getString(5));
+                txtEmpSalary.setText(result.getString(6));
 
-            if (e1.equals(null)) {
-                new Alert(Alert.AlertType.WARNING, "Empty Result..!").show();
             } else {
-                txtEmpId.setText(e1.getId());
-                txtEmpName.setText(e1.getName());
-                txtEmpAddress.setText(e1.getAddress());
-                txtEmpAge.setText(e1.getAge());
-                txtEmpTel.setText(e1.getContact());
-                txtEmpSalary.setText(e1.getSalary());
+                new Alert(Alert.AlertType.WARNING, "Empty Result").show();
             }
-        } catch (SQLException | ClassNotFoundException x) {
-            x.printStackTrace();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
         }
 
     }
