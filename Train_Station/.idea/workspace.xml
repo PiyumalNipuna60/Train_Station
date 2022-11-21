@@ -21,60 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="45208517-7dbb-42d9-9fa4-451aa42eef4c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/AppInitialize.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/1000_F_296423009_OFShyxV6Mz6jnyUVEePkwWBzZ4hXuAh9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/12501-NOAIN2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/21653.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/46157.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/6953.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/OE612L0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/Untitled-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/Untitled-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/Untitled-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/Untitled-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/Untitled-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/Untitled-6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/Untitled-7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/draw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/gallery-1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/gallery-4.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/sideways-woman-listening-music-train-platform.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/sl_112520_38300_26.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/trash.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/user.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/vintage-locomotive-railway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/AddBookingCustomerFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/AddEmployeeFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/AddTrainFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/CheckTrainScheduleFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/EmployeeSalaryFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/IncomeReportFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/LoadAllCustomerBookingFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/LoadAllEmployeeFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/LoadAllTrainScheduleUserFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/LoginDashBordFormController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/ModifyBookingCustomerFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/db/DBConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/lib/mysql-connector-java-8.0.24.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/model/BookingCustomer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/model/Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/model/Train.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/model/TrainSchedulCheck.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/util/CrudUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/AddBookingCustomerFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/AddEmployeeFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/AddTrainFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/CheckTrainScheduleFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/EmployeeSalaryFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/IncomeReportFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/LoadAllCustomerBookingFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/LoadAllEmployeeFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/LoadAllTrainScheduleUserFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/LoginDashBordForm.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/ModifyBookingCustomerFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/ModifyEmployeeFrom.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/ModifyEmployeeFromController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ModifyEmployeeFromController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -208,7 +154,7 @@
       <workItem from="1668874580833" duration="20000" />
       <workItem from="1668967139007" duration="1613000" />
       <workItem from="1669046755359" duration="576000" />
-      <workItem from="1669047535269" duration="605000" />
+      <workItem from="1669047535269" duration="1075000" />
     </task>
     <servers />
   </component>
@@ -244,41 +190,45 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="473" y="174" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1667405111670" />
-    <state width="1493" height="175" key="GridCell.Tab.0.bottom" timestamp="1668968828762">
+    <state width="770" height="172" key="GridCell.Tab.0.bottom" timestamp="1669048312970">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="175" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1668968828762" />
+    <state width="770" height="172" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1669048312970" />
     <state width="698" height="176" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1668706459637" />
-    <state width="1493" height="175" key="GridCell.Tab.0.center" timestamp="1668968828762">
+    <state width="770" height="172" key="GridCell.Tab.0.center" timestamp="1669048312970">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="175" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1668968828762" />
+    <state width="770" height="172" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1669048312970" />
     <state width="698" height="176" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1668706459637" />
-    <state width="1493" height="175" key="GridCell.Tab.0.left" timestamp="1668968828762">
+    <state width="770" height="172" key="GridCell.Tab.0.left" timestamp="1669048312970">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="175" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1668968828762" />
+    <state width="770" height="172" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1669048312970" />
     <state width="698" height="176" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1668706459637" />
-    <state width="1493" height="175" key="GridCell.Tab.0.right" timestamp="1668968828762">
+    <state width="770" height="172" key="GridCell.Tab.0.right" timestamp="1669048312970">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="175" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1668968828762" />
+    <state width="770" height="172" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1669048312970" />
     <state width="698" height="176" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1668706459637" />
-    <state width="1493" height="277" key="GridCell.Tab.1.bottom" timestamp="1668189515936">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="770" height="255" key="GridCell.Tab.1.bottom" timestamp="1669048282388">
+      <screen x="0" y="0" width="1536" height="816" />
     </state>
+    <state width="770" height="255" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1669048282388" />
     <state width="1493" height="277" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1668189515936" />
-    <state width="1493" height="277" key="GridCell.Tab.1.center" timestamp="1668189515936">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="770" height="255" key="GridCell.Tab.1.center" timestamp="1669048282388">
+      <screen x="0" y="0" width="1536" height="816" />
     </state>
+    <state width="770" height="255" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1669048282388" />
     <state width="1493" height="277" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1668189515936" />
-    <state width="1493" height="277" key="GridCell.Tab.1.left" timestamp="1668189515936">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="770" height="255" key="GridCell.Tab.1.left" timestamp="1669048282388">
+      <screen x="0" y="0" width="1536" height="816" />
     </state>
+    <state width="770" height="255" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1669048282388" />
     <state width="1493" height="277" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1668189515936" />
-    <state width="1493" height="277" key="GridCell.Tab.1.right" timestamp="1668189515936">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="770" height="255" key="GridCell.Tab.1.right" timestamp="1669048282388">
+      <screen x="0" y="0" width="1536" height="816" />
     </state>
+    <state width="770" height="255" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1669048282388" />
     <state width="1493" height="277" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1668189515936" />
     <state x="249" y="7" key="SettingsEditor" timestamp="1667407105833">
       <screen x="0" y="0" width="1536" height="864" />

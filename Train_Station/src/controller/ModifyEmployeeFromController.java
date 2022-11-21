@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import model.Employee;
@@ -34,7 +35,7 @@ public class ModifyEmployeeFromController {
 
     LinkedHashMap<TextField, Pattern> map = new LinkedHashMap<>();
 
-    public void initialize(){
+    public void initialize() {
         Pattern pattenId = Pattern.compile("^(E00-)[0-9]{3,5}$");
         Pattern pattenName = Pattern.compile("^[A-z ]{3,}$");
         Pattern pattenAddress = Pattern.compile("^[A-z0-9 ,/]{5,}$");
@@ -49,7 +50,12 @@ public class ModifyEmployeeFromController {
         map.put(txtEmpTel, pattenTel);
         map.put(txtEmpSalary, pattenSalary);
 
-
+        colEmpId.setCellValueFactory(new PropertyValueFactory("id"));
+        colEmpName.setCellValueFactory(new PropertyValueFactory("name"));
+        colEmpAddress.setCellValueFactory(new PropertyValueFactory("address"));
+        colEmpAge.setCellValueFactory(new PropertyValueFactory("age"));
+        colEmpTel.setCellValueFactory(new PropertyValueFactory("contact"));
+        colEmpSalary.setCellValueFactory(new PropertyValueFactory("salary"));
 
         try {
             loadTableData();
@@ -61,8 +67,8 @@ public class ModifyEmployeeFromController {
 
     private void loadTableData() throws SQLException, ClassNotFoundException {
         ResultSet resultSet = CrudUtil.executeQuery("Select * from employee");
-        ObservableList<Employee> obList= FXCollections.observableArrayList();
-        while (resultSet.next()){
+        ObservableList<Employee> obList = FXCollections.observableArrayList();
+        while (resultSet.next()) {
             obList.add(
                     new Employee(
                             resultSet.getString(1),
@@ -70,7 +76,7 @@ public class ModifyEmployeeFromController {
                             resultSet.getString(3),
                             resultSet.getString(4),
                             resultSet.getString(5),
-                            resultSet.getString(6)                    )
+                            resultSet.getString(6))
             );
         }
         tblEmployee.setItems(obList);
@@ -78,7 +84,7 @@ public class ModifyEmployeeFromController {
     }
 
 
-    public void btnDeleteEmployeeOnAction(ActionEvent actionEvent){
+    public void btnDeleteEmployeeOnAction(ActionEvent actionEvent) {
         try {
             if (CrudUtil.executeUpdate("DELETE FROM employee WHERE id=?", txtEmpId.getText())) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Delete Employee..!").show();
@@ -107,7 +113,7 @@ public class ModifyEmployeeFromController {
 
     public void txtSearchOnAction(ActionEvent actionEvent) {
         try {
-            ResultSet result = CrudUtil.executeQuery("SELECT * FROM employee WHERE id=?",txtEmpId.getText());
+            ResultSet result = CrudUtil.executeQuery("SELECT * FROM employee WHERE id=?", txtEmpId.getText());
             if (result.next()) {
                 txtEmpName.setText(result.getString(2));
                 txtEmpAddress.setText(result.getString(3));
@@ -140,12 +146,12 @@ public class ModifyEmployeeFromController {
     }
 
     public void btnUpdateEmployeeOnAction() {
-        Employee c=new Employee(
-                txtEmpId.getText(),txtEmpName.getText(),txtEmpAddress.getText(),txtEmpAge.getText(),txtEmpSalary.getText(),txtEmpTel.getText()
+        Employee c = new Employee(
+                txtEmpId.getText(), txtEmpName.getText(), txtEmpAddress.getText(), txtEmpAge.getText(), txtEmpSalary.getText(), txtEmpTel.getText()
         );
         try {
             if (CrudUtil.executeUpdate("UPDATE employee SET name=? ,address=? ,age=? ,contact=? ,salary=?  WHERE id= ?",
-                    c.getName(),c.getAddress(),c.getAge(),c.getContact(),c.getSalary(),c.getId())) {
+                    c.getName(), c.getAddress(), c.getAge(), c.getContact(), c.getSalary(), c.getId())) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Updated!").show();
             } else {
                 new Alert(Alert.AlertType.WARNING, "Try Again!").show();
