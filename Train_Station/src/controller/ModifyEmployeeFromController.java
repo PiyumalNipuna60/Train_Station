@@ -2,6 +2,7 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import model.Employee;
 import util.CrudUtil;
@@ -29,7 +30,7 @@ public class ModifyEmployeeFromController {
     public TableColumn colEmpTel;
     public TableColumn colEmpSalary;
 
-    LinkedHashMap<TextField,Pattern> map=new LinkedHashMap();
+    LinkedHashMap<TextField, Pattern> map = new LinkedHashMap<>();
 
     public void initialize(){
         Pattern pattenId = Pattern.compile("^(E00-)[0-9]{3,5}$");
@@ -38,7 +39,6 @@ public class ModifyEmployeeFromController {
         Pattern pattenAge = Pattern.compile("^[0-9]{2}$");
         Pattern pattenTel = Pattern.compile("^(071|072|077|076|078|075)[0-9]{7}$");
         Pattern pattenSalary = Pattern.compile("^[1-9][0-9]*(.[0-9]{2})?$");
-
 
         map.put(txtEmpId, pattenId);
         map.put(txtEmpName, pattenName);
@@ -111,7 +111,7 @@ public class ModifyEmployeeFromController {
         return null;
     }
 
-    public void btnUpdateEmployeeOnAction(ActionEvent actionEvent) {
+    public void btnUpdateEmployeeOnAction() {
         Employee c=new Employee(
                 txtEmpId.getText(),txtEmpName.getText(),txtEmpAddress.getText(),txtEmpAge.getText(),txtEmpSalary.getText(),txtEmpTel.getText()
         );
@@ -128,7 +128,44 @@ public class ModifyEmployeeFromController {
     }
 
     public void textFields_Key_Releaseed(KeyEvent keyEvent) {
-        validation();
+        Validation();
+
+        if (keyEvent.getCode() == KeyCode.ENTER) {
+            Object responds = Validation();
+
+            if (responds instanceof TextField) {
+                TextField textField = (TextField) responds;
+                textField.requestFocus();
+            } else {
+                btnUpdateEmployeeOnAction();
+            }
+        }
+    }
+
+    private Object Validation() {
+        for (TextField key : map.keySet()) {
+            Pattern pattern = map.get(key);
+            if (!pattern.matcher(key.getText()).matches()) {
+                addError(key);
+                return key;
+            } else
+                removeError(key);
+
+        }
+        return true;
+    }
+
+    public void addError(TextField txtCus) {
+        if (txtCus.getText().length() > 0) {
+            txtCus.getParent().setStyle("-fx-border-color: red");
+        }
+        btnUpdateEmployee.setDisable(true);
+    }
+
+    public void removeError(TextField txtCus) {
+        txtCus.getParent().setStyle("-fx-border-color: green");
+        btnUpdateEmployee.setDisable(false);
+        btnDeleteEmployee1.setDisable(false);
     }
 
 
