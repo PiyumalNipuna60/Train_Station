@@ -1,5 +1,7 @@
 package controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
@@ -46,6 +48,32 @@ public class ModifyEmployeeFromController {
         map.put(txtEmpAge, pattenAge);
         map.put(txtEmpTel, pattenTel);
         map.put(txtEmpSalary, pattenSalary);
+
+
+
+        try {
+            loadTableData();
+        } catch (SQLException | ClassNotFoundException x) {
+            x.printStackTrace();
+        }
+
+    }
+
+    private void loadTableData() throws SQLException, ClassNotFoundException {
+        ResultSet resultSet = CrudUtil.executeQuery("Select * from employee");
+        ObservableList<Employee> obList= FXCollections.observableArrayList();
+        while (resultSet.next()){
+            obList.add(
+                    new Employee(
+                            resultSet.getString(1),
+                            resultSet.getString(2),
+                            resultSet.getString(3),
+                            resultSet.getString(4),
+                            resultSet.getString(5),
+                            resultSet.getString(6)                    )
+            );
+        }
+        tblEmployee.setItems(obList);
 
     }
 
