@@ -4,6 +4,10 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import model.Train;
+import util.CrudUtil;
+
+import java.sql.SQLException;
 
 public class ModifyTrainFromController {
 
@@ -28,6 +32,21 @@ public class ModifyTrainFromController {
 
 
     public void btnUpdateTrainOnAction(ActionEvent actionEvent) {
+        Train c=new Train(
+                txtTrainId.getText(), txtTrainName.getText(), txtStartTime.getText(), txtEndTime.getText(), cmbTrainFrom.getValue(), cmbTrainTo.getValue());
+
+        try {
+            if (CrudUtil.executeUpdate("UPDATE train SET trainName=? ,startTime=? ,EndTime=? ,trainFrom=? ,trainTo=? WHERE trainId=? ",
+                    c.getTrainName(),c.getStartTime(),c.getEndTime(),c.getTrainFrom(),c.getTrainTo(),c.getTrainId())) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Updated!").show();
+
+            } else {
+                new Alert(Alert.AlertType.WARNING, "Try Again!").show();
+            }
+
+        } catch (SQLException | ClassNotFoundException x) {
+            x.printStackTrace();
+        }
     }
 
     public void btnRemoveTrainOnAction(ActionEvent actionEvent) {

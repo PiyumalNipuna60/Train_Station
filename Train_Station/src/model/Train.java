@@ -8,7 +8,7 @@ public class Train {
     private String trainFrom;
     private String trainTo;
 
-    public Train() {
+    public Train(String text, String txtTrainNameText, String txtStartTimeText, String txtEndTimeText, Object value, Object cmbTrainToValue) {
     }
 
     public Train(String trainId, String trainName, String startTime, String endTime, String trainFrom, String trainTo) {
