@@ -62,6 +62,7 @@ public class ModifyTrainFromController {
     }
 
     public void btnBackOnAction(ActionEvent actionEvent) {
+        trainAnchorPane.getChildren().clear();
     }
 
     public void txtSearchOnAction(ActionEvent actionEvent) {
