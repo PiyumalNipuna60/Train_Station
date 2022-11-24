@@ -50,6 +50,15 @@ public class ModifyTrainFromController {
     }
 
     public void btnRemoveTrainOnAction(ActionEvent actionEvent) {
+        try {
+            if(CrudUtil.executeUpdate("DELETE FROM train WHERE trainId=?",txtTrainId.getText())){
+                new Alert(Alert.AlertType.CONFIRMATION, "Remove Train!").show();
+            } else {
+                new Alert(Alert.AlertType.WARNING, "Try Again!").show();
+            }
+        } catch (SQLException | ClassNotFoundException x) {
+            x.printStackTrace();
+        }
     }
 
     public void btnBackOnAction(ActionEvent actionEvent) {
