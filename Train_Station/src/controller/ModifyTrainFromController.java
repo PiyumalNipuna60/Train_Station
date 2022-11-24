@@ -65,10 +65,21 @@ public class ModifyTrainFromController {
         trainAnchorPane.getChildren().clear();
     }
 
-    public void txtSearchOnAction(ActionEvent actionEvent) {
+    public void btnclearOnAction(ActionEvent actionEvent) {
+        clearMethod();
     }
 
-    public void btnclearOnAction(ActionEvent actionEvent) {
+    private void clearMethod() {
+        txtTrainId.clear();
+        txtTrainName.clear();
+        txtEndTime.clear();
+        txtStartTime.clear();
+        cmbTrainFrom.getSelectionModel().clearSelection();
+        cmbTrainTo.getSelectionModel().clearSelection();
+    }
+
+
+    public void txtSearchOnAction(ActionEvent actionEvent) {
     }
 
     public void textFields_Key_Releaseed(KeyEvent keyEvent) {
