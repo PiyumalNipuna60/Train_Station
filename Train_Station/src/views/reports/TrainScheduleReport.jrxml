@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TrainScheduleReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a07b2d67-1d33-4f90-b37f-34d6838824c8">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="TrainStation"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select*from stationSchedule]]>
+	</queryString>
+	<field name="cusFrom" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cusFrom"/>
+		<property name="com.jaspersoft.studio.field.label" value="cusFrom"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stationschedule"/>
+	</field>
+	<field name="cusTo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cusTo"/>
+		<property name="com.jaspersoft.studio.field.label" value="cusTo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stationschedule"/>
+	</field>
+	<field name="trainId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="trainId"/>
+		<property name="com.jaspersoft.studio.field.label" value="trainId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stationschedule"/>
+	</field>
+	<field name="trainName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="trainName"/>
+		<property name="com.jaspersoft.studio.field.label" value="trainName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stationschedule"/>
+	</field>
+	<field name="startStationTime" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="startStationTime"/>
+		<property name="com.jaspersoft.studio.field.label" value="startStationTime"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stationschedule"/>
+	</field>
+	<field name="endStationTime" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="endStationTime"/>
+		<property name="com.jaspersoft.studio.field.label" value="endStationTime"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stationschedule"/>
+	</field>
+	<field name="trainStopTime" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="trainStopTime"/>
+		<property name="com.jaspersoft.studio.field.label" value="trainStopTime"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stationschedule"/>
+	</field>
+	<field name="trainStartStation" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="trainStartStation"/>
+		<property name="com.jaspersoft.studio.field.label" value="trainStartStation"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stationschedule"/>
+	</field>
+	<field name="trainStopStation" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="trainStopStation"/>
+		<property name="com.jaspersoft.studio.field.label" value="trainStopStation"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stationschedule"/>
+	</field>
+	<variable name="cusFrom1" class="java.lang.Integer" resetType="Column" calculation="Count">
+		<variableExpression><![CDATA[$F{cusFrom}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="90" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="24" width="555" height="40" uuid="acb34bf1-b441-4f7e-a8f7-b99cc6f7a9fc"/>
+				<textElement textAlignment="Center">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Welcome to Sri Lanka Railways]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="13" width="555" height="4" uuid="071aee8f-7e2b-4977-af4a-30343a7fb478"/>
+			</line>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="10" y="50" width="100" height="30" uuid="aa2a8356-94ab-4e90-b215-2d818e283c56"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="220" y="60" width="100" height="30" uuid="c782e507-f760-45b0-abfd-6f95162649e9"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Sri Lanka Railway]]></text>
+			</staticText>
+			<textField pattern="HH:mm">
+				<reportElement x="480" y="50" width="100" height="30" uuid="30c48b9a-2f7e-4e37-a050-deb74488d726"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="10" y="74" width="555" height="1" uuid="2ee23628-d862-4003-8a1d-a6695c0f6689"/>
+			</line>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="59" height="46" uuid="3a4dfede-bc5a-4e4f-acbb-ed3d50893739">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="35689f86-97df-4bbc-8a1c-9bda4380a9af"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[cusFrom]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="0" width="50" height="46" uuid="d7ff9a47-e001-4be1-be94-86d19b6fd456">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="08cf0afb-70ba-4f87-b58a-279a405a0312"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[cusTo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="0" width="61" height="46" uuid="74d19721-539e-4388-8a72-2010e91e332d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ef9e3e94-1f69-4d3d-a9c6-177c035442cb"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[trainId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="171" y="0" width="61" height="46" uuid="4b181413-f12d-4c14-80da-054e62d75bd2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="30604554-2900-422e-9bf3-94484bf50ae0"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[train Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="232" y="0" width="79" height="46" uuid="0d3248a0-9ad5-4854-b6cf-295bbb56bb01">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a6dd8c1c-0dd7-4d8a-84a8-a484bc4b7782"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[start Station Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="311" y="0" width="61" height="46" uuid="8a27683d-321b-45f8-8368-59ebc332502c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d94188ef-fe51-4953-a165-defc93c963b0"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[end Station Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="0" width="61" height="46" uuid="fbfd87eb-9e9e-4150-bc82-c52dbaf5ef0d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0b591145-6326-473e-ad41-95ced3fb53b2"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[train Stop Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="433" y="0" width="61" height="46" uuid="ec1a48d8-62e7-46e1-b2b4-22c52cd1334f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2b2806ee-7462-40a8-a7d1-398568a5a791"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[train Start Station]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="494" y="0" width="61" height="46" uuid="c6abe2df-d281-42d9-9f4e-6e5cc2e5c45e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="da7a3e15-fc25-40ca-b99e-292c302c3060"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[train Stop Station]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="59" height="30" uuid="6bc51fb6-9a57-4abc-a6b2-be2ea2d39b72">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="35689f86-97df-4bbc-8a1c-9bda4380a9af"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cusFrom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="0" width="50" height="30" uuid="7241dcf9-daab-4c94-b65f-465f5ac9cd54">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="08cf0afb-70ba-4f87-b58a-279a405a0312"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cusTo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="0" width="61" height="30" uuid="b970d775-baf3-4b94-9793-62ce5108d400">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ef9e3e94-1f69-4d3d-a9c6-177c035442cb"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{trainId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="171" y="0" width="61" height="30" uuid="85eb2e28-f517-41ce-8918-9a980a4ce900">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="30604554-2900-422e-9bf3-94484bf50ae0"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{trainName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="232" y="0" width="79" height="30" uuid="baa6966f-05d1-485b-b987-62d59d082323">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a6dd8c1c-0dd7-4d8a-84a8-a484bc4b7782"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{startStationTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="311" y="0" width="61" height="30" uuid="b5b4c083-f8e7-4c2b-b125-d2d8f5f29d70">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d94188ef-fe51-4953-a165-defc93c963b0"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{endStationTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="372" y="0" width="61" height="30" uuid="8155a601-1a82-496d-b4ad-d613d01c4dfc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0b591145-6326-473e-ad41-95ced3fb53b2"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{trainStopTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="433" y="0" width="61" height="30" uuid="e4fccbf2-6f3d-4214-8db5-19d0d0990258">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2b2806ee-7462-40a8-a7d1-398568a5a791"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{trainStartStation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="494" y="0" width="61" height="30" uuid="2da8fce5-28d0-474c-9232-45e3b587d3a4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="da7a3e15-fc25-40ca-b99e-292c302c3060"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{trainStopStation}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="51" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="20" width="555" height="30" uuid="ac1c1fbe-d44a-40b5-9e1a-2ac9973105b2"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Thank for you]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="9" width="555" height="1" uuid="404a0ce3-30aa-4021-80fe-9f850fa1050c"/>
+			</line>
+			<line>
+				<reportElement x="3" y="50" width="555" height="1" uuid="0025a712-91b5-4dba-98fe-ce7537e53689"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BookingReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7da9d4f4-696d-4690-8785-b54573459a56">
+	<parameter name="id" class="java.lang.String"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="contact" class="java.lang.String"/>
+	<parameter name="trainFrom" class="java.lang.String"/>
+	<parameter name="trainTo" class="java.lang.String"/>
+	<parameter name="time" class="java.lang.String"/>
+	<parameter name="train" class="java.lang.String"/>
+	<parameter name="seatNo" class="java.lang.String"/>
+	<parameter name="trainClass" class="java.lang.String"/>
+	<parameter name="price" class="java.lang.String"/>
+	<parameter name="date" class="java.sql.Date"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="81" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="20" width="555" height="40" uuid="8754b60b-996f-4202-a81a-92efa1b071e2"/>
+				<textElement textAlignment="Center">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Welcome to Sri Lanka Railways]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="10" y="50" width="100" height="30" uuid="d0e66818-efba-4b24-9cfc-3a60169b4098"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="230" y="50" width="100" height="30" uuid="f72f2b64-55d8-445b-aae4-9299afe6ee01"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Sri Lanka Railway]]></text>
+			</staticText>
+			<textField pattern="HH:mm">
+				<reportElement x="480" y="50" width="100" height="30" uuid="0533969c-63f4-47ed-9ec9-57a251b4d10e"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="70" width="555" height="1" uuid="62c978c6-6fb2-43fa-b50e-0b31e71c1300"/>
+			</line>
+			<line>
+				<reportElement x="0" y="10" width="555" height="1" uuid="81b18b88-da4b-45a4-8f43-632d4e434d9c"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<detail>
+		<band height="424" splitType="Stretch">
+			<textField>
+				<reportElement x="140" y="-10" width="51" height="30" uuid="f403b42a-5ebe-43d9-93fc-451b660e392d"/>
+				<textFieldExpression><![CDATA[$P{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="144" y="30" width="42" height="30" uuid="7189ed3b-4fa6-453a-a657-4959092b1660"/>
+				<textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="70" width="42" height="30" uuid="881cf670-1945-4a79-9f1f-d4629d7a775e"/>
+				<textFieldExpression><![CDATA[$P{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="113" width="60" height="30" uuid="457f2751-f887-4b2c-85b3-e463db00519c"/>
+				<textFieldExpression><![CDATA[$P{contact}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="190" width="42" height="30" uuid="e9444ebd-f833-4e17-8cd5-9c6bb844502b"/>
+				<textFieldExpression><![CDATA[$P{trainFrom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="190" width="42" height="30" uuid="f61a0239-e5d7-4413-a48c-0425d8c08661"/>
+				<textFieldExpression><![CDATA[$P{trainTo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="240" width="42" height="30" uuid="13bcd420-ade0-42e3-a5f6-206810acfbe3"/>
+				<textFieldExpression><![CDATA[$P{time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="240" width="42" height="30" uuid="08597349-9d14-47b2-8d9c-66624c641ae4"/>
+				<textFieldExpression><![CDATA[$P{train}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="290" width="42" height="30" uuid="7bab8392-1ab4-4418-8309-068f1f8ace28"/>
+				<textFieldExpression><![CDATA[$P{seatNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="104" y="387" width="42" height="30" uuid="3d9683f9-fc97-49d8-914d-3a75455d45d6">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$P{price}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="-10" width="130" height="30" uuid="819fc44e-ba41-4c4c-9e1e-ded095f0244a">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Id :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="130" height="30" uuid="fc22f6a3-b557-4551-b6bd-e8b562398ad0">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="70" width="130" height="30" uuid="c0b623bf-fe82-4eea-8122-6ba5998e4e5a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Address :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="110" width="130" height="30" uuid="94cb89c4-8e88-4e22-af3e-368e5c29cd40">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Contact :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="190" width="90" height="30" uuid="26a2493d-3a0d-4618-a9f0-42bc4d216b94">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[From :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="190" width="90" height="30" uuid="5441f21e-ffe4-4dec-a0c6-177b13c464e2">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[To :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="240" width="90" height="30" uuid="5c61b254-3b6d-4acf-9518-527bc9a4b773">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Train Time :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="240" width="90" height="30" uuid="509b89d4-f41b-404a-a939-0a86e99fe045">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Train Name :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="290" width="90" height="30" uuid="bfcad2a1-bddc-4291-9e99-8907fe38d7b4">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Seat No :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="340" width="90" height="30" uuid="788b3280-5296-49db-b51f-d48a29c8fedb">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Train Class:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="387" width="90" height="30" uuid="7b6915bb-4514-42c6-89c2-a6d6d1e8775b">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Booking Price:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="104" y="340" width="42" height="30" uuid="76753186-2869-420d-a0ad-c91df32a2abd"/>
+				<textFieldExpression><![CDATA[$P{trainClass}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="160" width="555" height="1" uuid="2bc72580-6307-4cf3-ae66-75ef66344954"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="19" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="12" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="65" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="49" width="555" height="1" uuid="40dc8a35-fe3a-45ee-bebe-57c52417c8a4"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="19" width="555" height="30" uuid="04de1449-2e79-46cf-aa5a-185a248b5730"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Thank for you]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="9" width="555" height="4" uuid="2b32e437-3169-4bcb-9537-781df6eddc37"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>
