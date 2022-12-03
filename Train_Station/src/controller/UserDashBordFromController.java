@@ -1,5 +1,6 @@
 package controller;
 
+import db.DBConnection;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -10,8 +11,14 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.design.JasperDesign;
+import net.sf.jasperreports.engine.xml.JRXmlLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -88,6 +95,21 @@ public class UserDashBordFromController {
 
 
     public void AllCustomerReportOnAction(ActionEvent actionEvent) {
+        try {
+            JasperDesign load = JRXmlLoader.load(this.getClass().getResourceAsStream("/views/reports/AllTrainScheduleReport.jrxml"));
+            JasperReport compileReport = JasperCompileManager.compileReport(load);
+
+            //JasperReport compileReport=(JasperReport) JRLoader.loadObject(this.getClass().getResource("/views/reports/TrainScheduleReport.jasper"));
+            Connection connection = DBConnection.getInstance().getConnection();
+            JasperPrint jasperPrint = JasperFillManager.fillReport(compileReport, null, connection);
+            JasperViewer.viewReport(jasperPrint, false);
+        } catch (JRException e) {
+            e.printStackTrace();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     public void AllTrainReportPOnAction(ActionEvent actionEvent) {
