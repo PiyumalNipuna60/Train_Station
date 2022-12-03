@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -50,7 +51,8 @@ public class UserDashBordFromController {
     }
 
     public void btnCancelOnAction(ActionEvent actionEvent) throws IOException {
-        setUi("LoginDashBordForm");
+        Stage window = (Stage) btnCancel.getScene().getWindow();
+        window.close();
     }
 
     public void setUi(String URL) throws IOException {
@@ -58,12 +60,15 @@ public class UserDashBordFromController {
         secondAnchorPane.getChildren().setAll(pane);
     }
 
-    public void btnLogOutOnAction(ActionEvent actionEvent) {
+    public void btnLogOutOnAction(ActionEvent actionEvent) throws IOException {
+        Stage window = (Stage) btnCancel.getScene().getWindow();
+        window.close();
     }
 
     public void AllCustomerReportOnAction(ActionEvent actionEvent) {
     }
 
     public void AllTrainReportPOnAction(ActionEvent actionEvent) {
+
     }
 }
