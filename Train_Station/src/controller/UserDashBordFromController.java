@@ -31,6 +31,10 @@ public class UserDashBordFromController {
     public AnchorPane mainAnchorPane;
     public AnchorPane secondAnchorPane;
 
+    public void initialize() {
+        generateRealTime();
+    }
+
 
     public void btnBookingCustomerOnAction(ActionEvent actionEvent) throws IOException {
         setUi("AddBookingCustomerFrom");
