@@ -24,7 +24,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class UserDashBordFromController {
-
     public Button btnBookingCustomer;
     public Button btnModifyCustomer;
     public Button btnLoadAllCustomer;
@@ -43,6 +42,20 @@ public class UserDashBordFromController {
     }
 
 
+    public void btnMaintenanceOnAction(ActionEvent actionEvent) throws IOException {
+
+    }
+
+    public void btnLogOutOnAction(ActionEvent actionEvent) throws IOException {
+        Stage window = (Stage) btnCancel.getScene().getWindow();
+        window.close();
+    }
+
+    public void btnCancelOnAction(ActionEvent actionEvent) throws IOException {
+        Stage window = (Stage) btnCancel.getScene().getWindow();
+        window.close();
+    }
+
     public void btnBookingCustomerOnAction(ActionEvent actionEvent) throws IOException {
         setUi("AddBookingCustomerFrom");
     }
@@ -59,28 +72,13 @@ public class UserDashBordFromController {
         setUi("LoadAllTrainScheduleUserFrom");
     }
 
-    public void btnMaintenanceOnAction(ActionEvent actionEvent) throws IOException {
-        setUi("");
-    }
-
     public void btnCheckScheduleOnAction(ActionEvent actionEvent) throws IOException {
         setUi("CheckTrainScheduleFrom");
-
     }
 
-    public void btnCancelOnAction(ActionEvent actionEvent) throws IOException {
-        Stage window = (Stage) btnCancel.getScene().getWindow();
-        window.close();
-    }
-
-    public void setUi(String URL) throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("../views/" + URL + ".fxml"));
+    private void setUi(String URI) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("../views/" + URI + ".fxml"));
         secondAnchorPane.getChildren().setAll(pane);
-    }
-
-    public void btnLogOutOnAction(ActionEvent actionEvent) throws IOException {
-        Stage window = (Stage) btnCancel.getScene().getWindow();
-        window.close();
     }
 
     private void generateRealTime() {
@@ -93,8 +91,25 @@ public class UserDashBordFromController {
         timeline.play();
     }
 
-
     public void AllCustomerReportOnAction(ActionEvent actionEvent) {
+        try {
+            JasperDesign load = JRXmlLoader.load(this.getClass().getResourceAsStream("/views/reports/AllCustomerReport.jrxml"));
+            JasperReport compileReport = JasperCompileManager.compileReport(load);
+
+            //JasperReport compileReport=(JasperReport) JRLoader.loadObject(this.getClass().getResource("/views/reports/TrainScheduleReport.jasper"));
+            Connection connection = DBConnection.getInstance().getConnection();
+            JasperPrint jasperPrint = JasperFillManager.fillReport(compileReport, null, connection);
+            JasperViewer.viewReport(jasperPrint, false);
+        } catch (JRException e) {
+            e.printStackTrace();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void AllTrainReportPOnAction(ActionEvent actionEvent) {
         try {
             JasperDesign load = JRXmlLoader.load(this.getClass().getResourceAsStream("/views/reports/AllTrainScheduleReport.jrxml"));
             JasperReport compileReport = JasperCompileManager.compileReport(load);
@@ -112,7 +127,4 @@ public class UserDashBordFromController {
         }
     }
 
-    public void AllTrainReportPOnAction(ActionEvent actionEvent) {
-
-    }
 }
