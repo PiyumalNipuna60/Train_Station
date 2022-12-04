@@ -12,6 +12,8 @@ import util.CrudUtil;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.LinkedHashMap;
+import java.util.regex.Pattern;
 
 public class ModifyTrainFromController {
 
@@ -32,8 +34,19 @@ public class ModifyTrainFromController {
     public TableColumn colTrainName;
     public TableColumn colTrainStartTime;
     public TableColumn colTrainEndTime;
+    LinkedHashMap<TextField, Pattern> map=new LinkedHashMap();
 
-    public void initialize(){
+    public void initialize() {
+
+        Pattern pattenId = Pattern.compile("^(T00-)[0-9]{3,5}$");
+        Pattern pattenName = Pattern.compile("^[A-z ]{3,}$");
+        Pattern patternStartTime = Pattern.compile("^([01]?[0-9]|2[0-3]).[0-5][0-9]$");
+        Pattern pattenEndTime = Pattern.compile("^([01]?[0-9]|2[0-3]).[0-5][0-9]$");
+
+        map.put(txtTrainId,pattenId);
+        map.put(txtTrainName,pattenName);
+        map.put(txtStartTime,patternStartTime);
+        map.put(txtEndTime,pattenEndTime);
 
         colTrainId.setCellValueFactory(new PropertyValueFactory<>("trainId"));
         colTrainName.setCellValueFactory(new PropertyValueFactory<>("trainName"));
@@ -52,10 +65,10 @@ public class ModifyTrainFromController {
 
     private void loadComboBox() throws SQLException, ClassNotFoundException {
         ResultSet resultSet = CrudUtil.executeQuery("SELECT * FROM station ORDER BY name ASC");
-        ObservableList obList=FXCollections.observableArrayList();
-        while (resultSet.next()){
+        ObservableList obList = FXCollections.observableArrayList();
+        while (resultSet.next()) {
             obList.add(
-                  resultSet.getString(2)
+                    resultSet.getString(2)
             );
         }
         cmbTrainTo.setItems(obList);
@@ -65,8 +78,8 @@ public class ModifyTrainFromController {
 
     private void loadtableData() throws SQLException, ClassNotFoundException {
         ResultSet resultSet = CrudUtil.executeQuery("Select * from train");
-        ObservableList<Train> obList= FXCollections.observableArrayList();
-        while (resultSet.next()){
+        ObservableList<Train> obList = FXCollections.observableArrayList();
+        while (resultSet.next()) {
             obList.add(
                     new Train(
                             resultSet.getString(1),
@@ -139,7 +152,7 @@ public class ModifyTrainFromController {
                 txtEndTime.setText(result.getString(4));
                 cmbTrainFrom.setValue(result.getString(5));
                 cmbTrainTo.setValue(result.getString(6));
-            }else {
+            } else {
                 new Alert(Alert.AlertType.WARNING, "Empty Result").show();
             }
 
