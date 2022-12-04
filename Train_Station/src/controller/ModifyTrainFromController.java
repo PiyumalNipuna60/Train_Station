@@ -1,7 +1,10 @@
 package controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import model.Train;
@@ -29,6 +32,41 @@ public class ModifyTrainFromController {
     public TableColumn colTrainName;
     public TableColumn colTrainStartTime;
     public TableColumn colTrainEndTime;
+
+    public void initialize(){
+
+        colTrainId.setCellValueFactory(new PropertyValueFactory<>("trainId"));
+        colTrainName.setCellValueFactory(new PropertyValueFactory<>("trainName"));
+        colTrainTo.setCellValueFactory(new PropertyValueFactory<>("trainTo"));
+        colTrainFrom.setCellValueFactory(new PropertyValueFactory<>("trainFrom"));
+        colTrainStartTime.setCellValueFactory(new PropertyValueFactory<>("startTime"));
+        colTrainEndTime.setCellValueFactory(new PropertyValueFactory<>("EndTime"));
+
+
+        try {
+            loadtableData();
+        } catch (SQLException | ClassNotFoundException x) {
+            x.printStackTrace();
+        }
+    }
+
+    private void loadtableData() throws SQLException, ClassNotFoundException {
+        ResultSet resultSet = CrudUtil.executeQuery("Select * from train");
+        ObservableList<Train> obList= FXCollections.observableArrayList();
+        while (resultSet.next()){
+            obList.add(
+                    new Train(
+                            resultSet.getString(1),
+                            resultSet.getString(2),
+                            resultSet.getString(3),
+                            resultSet.getString(4),
+                            resultSet.getString(5),
+                            resultSet.getString(6)
+                    )
+            );
+        }
+        tblAllTrain.setItems(obList);
+    }
 
 
     public void btnUpdateTrainOnAction(ActionEvent actionEvent) {
