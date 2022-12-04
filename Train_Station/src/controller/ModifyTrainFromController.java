@@ -1,10 +1,12 @@
 package controller;
 
+import com.sun.org.apache.xpath.internal.objects.XObject;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import model.Train;
@@ -95,7 +97,7 @@ public class ModifyTrainFromController {
     }
 
 
-    public void btnUpdateTrainOnAction(ActionEvent actionEvent) {
+    public void btnUpdateTrainOnAction() {
         Train c = new Train(
                 txtTrainId.getText(), txtTrainName.getText(), txtStartTime.getText(), txtEndTime.getText(), cmbTrainFrom.getValue(), cmbTrainTo.getValue());
 
@@ -163,6 +165,42 @@ public class ModifyTrainFromController {
     }
 
     public void textFields_Key_Releaseed(KeyEvent keyEvent) {
+        validation();
+        if (keyEvent.getCode()== KeyCode.ENTER){
+            Object repond=validation();
+
+            if (repond instanceof TextField){
+                TextField textField=(TextField) repond;
+                textField.requestFocus();
+            }else {
+                btnUpdateTrainOnAction();
+            }
+        }
+    }
+
+    private Object validation() {
+        for (TextField key : map.keySet()) {
+            Pattern pattern=map.get(key);
+            if (!pattern.matcher(key.getText()).matches()){
+                addError(key);
+                return key;
+            }else {
+                removeError(key);
+            }
+        }
+        return true;
+    }
+
+    public void addError(TextField txtCus) {
+        if (txtCus.getText().length() > 0) {
+            txtCus.getParent().setStyle("-fx-border-color: red");
+        }
+
+    }
+
+    public void removeError(TextField txtCus) {
+        txtCus.getParent().setStyle("-fx-border-color: green");
+
     }
 
 
