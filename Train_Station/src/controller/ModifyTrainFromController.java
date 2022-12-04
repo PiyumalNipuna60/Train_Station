@@ -42,12 +42,25 @@ public class ModifyTrainFromController {
         colTrainStartTime.setCellValueFactory(new PropertyValueFactory<>("startTime"));
         colTrainEndTime.setCellValueFactory(new PropertyValueFactory<>("EndTime"));
 
-
         try {
             loadtableData();
+            loadComboBox();
         } catch (SQLException | ClassNotFoundException x) {
             x.printStackTrace();
         }
+    }
+
+    private void loadComboBox() throws SQLException, ClassNotFoundException {
+        ResultSet resultSet = CrudUtil.executeQuery("SELECT * FROM station ORDER BY name ASC");
+        ObservableList obList=FXCollections.observableArrayList();
+        while (resultSet.next()){
+            obList.add(
+                  resultSet.getString(2)
+            );
+        }
+        cmbTrainTo.setItems(obList);
+        cmbTrainFrom.setItems(obList);
+
     }
 
     private void loadtableData() throws SQLException, ClassNotFoundException {
