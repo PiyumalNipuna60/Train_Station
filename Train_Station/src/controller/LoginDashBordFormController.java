@@ -28,16 +28,17 @@ public class LoginDashBordFormController {
         generateRealTime();
     }
 
-    public void btnUserLoginOnAction(ActionEvent actionEvent) {
+    public void btnSignInOnAction(ActionEvent actionEvent) throws IOException {
+        setUi("SignInFrom");
+    }
+
+    public void btnAdminLoginOnAction(ActionEvent actionEvent) throws IOException {
+        setUi("LoginAdminFrom");
 
     }
 
-    public void btnAdminLoginOnAction(ActionEvent actionEvent) {
-
-    }
-
-    public void btnSignInOnAction(ActionEvent actionEvent) {
-
+    public void btnUserLoginOnAction(ActionEvent actionEvent) throws IOException {
+        setUi("LoginUserFrom");
     }
 
     public void setUi(String URI) throws IOException {
