@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainAnchorPane" prefHeight="862.0" prefWidth="1426.0" style="-fx-background-color: white; -fx-border-radius: 10px;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminDashBordFromController">
+   <children>
+      <Label layoutX="269.0" layoutY="1.0" prefHeight="46.0" prefWidth="1189.0" style="-fx-background-color: #4834d4;" textFill="#121212">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRealTime" layoutX="1291.0" layoutY="5.0" lineSpacing="10.0" prefHeight="37.0" prefWidth="168.0" style="-fx-background-color: #4834d4;" text=" 00.00.00" textAlignment="RIGHT" textFill="#fff9f9" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRealDate" layoutX="341.0" layoutY="8.0" lineSpacing="10.0" prefHeight="31.0" prefWidth="179.0" text="00.00.00" textAlignment="RIGHT" textFill="#fff9f9" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font name="Bodoni MT Black Italic" size="20.0" />
+         </font>
+      </Label>
+      <Pane prefHeight="863.0" prefWidth="270.0" style="-fx-background-color: #222f3e;">
+         <children>
+            <Button fx:id="btnCancel" layoutX="45.0" layoutY="766.0" mnemonicParsing="false" onAction="#btnCancelOnAction" prefHeight="60.0" prefWidth="168.0" style="-fx-background-color: #222f3e;" text="Cancel" textFill="#eee6e6">
+               <font>
+                  <Font name="System Bold Italic" size="32.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAddTrain" alignment="BASELINE_LEFT" contentDisplay="RIGHT" layoutY="164.0" mnemonicParsing="false" onAction="#btnAddTrainOnAction" prefHeight="70.0" prefWidth="270.0" style="-fx-background-color: #222f3e;" text="            Add Train" textFill="WHITE" textOverrun="WORD_ELLIPSIS" />
+            <Button fx:id="btnModifyTrain" alignment="BASELINE_LEFT" contentDisplay="RIGHT" layoutY="234.0" mnemonicParsing="false" onAction="#btnModifyTrainOnAction" prefHeight="70.0" prefWidth="270.0" style="-fx-background-color: #222f3e;" text="          customize Train" textFill="WHITE" textOverrun="WORD_ELLIPSIS" />
+            <Button fx:id="btnLoadAllTrain" alignment="BASELINE_LEFT" contentDisplay="RIGHT" layoutY="304.0" mnemonicParsing="false" onAction="#btnLoadAllTrainOnAction" prefHeight="70.0" prefWidth="270.0" style="-fx-background-color: #222f3e;" text="          Load All Train" textFill="WHITE" textOverrun="WORD_ELLIPSIS" />
+            <Button fx:id="btnModifyEmployee" alignment="BASELINE_LEFT" contentDisplay="RIGHT" layoutY="444.0" mnemonicParsing="false" onAction="#btnModifyEmployeeOnAction" prefHeight="70.0" prefWidth="270.0" style="-fx-background-color: #222f3e;" text="          Modify Employee " textFill="WHITE" textOverrun="WORD_ELLIPSIS" />
+            <Button fx:id="btnLoadAllEmployee" alignment="BASELINE_LEFT" contentDisplay="RIGHT" layoutY="514.0" mnemonicParsing="false" onAction="#btnLoadAllEmployeeOnAction" prefHeight="70.0" prefWidth="270.0" style="-fx-background-color: #222f3e;" text="          Load All Employee" textFill="WHITE" textOverrun="WORD_ELLIPSIS" />
+            <Button fx:id="btnAddEmployee" alignment="BASELINE_LEFT" contentDisplay="RIGHT" layoutY="374.0" mnemonicParsing="false" onAction="#btnAddEmployeeOnAction" prefHeight="70.0" prefWidth="270.0" style="-fx-background-color: #222f3e;" text="          Add Employee " textFill="WHITE" textOverrun="WORD_ELLIPSIS" />
+            <Button fx:id="btnIncomeReport" alignment="BASELINE_LEFT" contentDisplay="RIGHT" layoutY="584.0" mnemonicParsing="false" onAction="#btnIncomeReportOnAction" prefHeight="70.0" prefWidth="270.0" style="-fx-background-color: #222f3e;" text="          Income Report" textFill="WHITE" textOverrun="WORD_ELLIPSIS" />
+            <Button fx:id="btnSalaryReport" alignment="BASELINE_LEFT" contentDisplay="RIGHT" layoutY="654.0" mnemonicParsing="false" onAction="#btnSalaryReportOnAction" prefHeight="70.0" prefWidth="270.0" style="-fx-background-color: #222f3e;" text="          Salary Report" textFill="WHITE" textOverrun="WORD_ELLIPSIS" />
+         </children>
+      </Pane>
+      <Pane prefHeight="163.0" prefWidth="270.0" style="-fx-background-color: #341f97;">
+         <children>
+            <Label layoutX="44.0" prefHeight="45.0" prefWidth="226.0" style="-fx-background-color: #4834d4;" text="   ADMIN" textFill="#f2ecec">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="45.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/Untitled-1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="22.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/Untitled-2.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="76.0" layoutY="87.0" text="Train Station" textFill="#f8f5f5">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Separator layoutX="73.0" layoutY="125.0" prefHeight="5.0" prefWidth="150.0" />
+         </children>
+      </Pane>
+      <Separator layoutX="267.0" orientation="VERTICAL" prefHeight="863.0" prefWidth="0.0" />
+      <Label layoutX="284.0" layoutY="61.0" text="User DashBoard">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Separator layoutX="281.0" layoutY="160.0" prefHeight="5.0" prefWidth="1172.0" style="-fx-background-color: black;" />
+      <Separator layoutX="271.0" layoutY="172.0" orientation="VERTICAL" prefHeight="686.0" prefWidth="6.0" style="-fx-background-color: black;" />
+      <ImageView fitHeight="686.0" fitWidth="1172.0" layoutX="282.0" layoutY="172.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/gallery-4.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="37.0" fitWidth="45.0" layoutX="284.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Untitled-4.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnLogOut" layoutX="1356.0" layoutY="122.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" prefHeight="31.0" prefWidth="81.0" style="-fx-background-color: #4834d4;" text="Log Out" textFill="#eee6e6">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="369.0" layoutY="246.0" text="Sri Lanka Railaways" textFill="#f80000">
+         <font>
+            <Font name="System Bold Italic" size="65.0" />
+         </font>
+      </Label>
+      <Label layoutX="369.0" layoutY="327.0" prefHeight="39.0" prefWidth="494.0" text="Welcome To Sri Lanka Railway Office" textFill="#fffefe">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Pane layoutX="1081.0" layoutY="368.0" prefHeight="332.0" prefWidth="287.0" style="-fx-background-color: #bdc3c7; -fx-border-color: black;">
+         <children>
+            <Button layoutX="31.0" layoutY="179.0" mnemonicParsing="false" onAction="#AllCustomerReportOnAction" prefHeight="46.0" prefWidth="226.0" style="-fx-background-color: #9b59b6; -fx-background-radius: 7;" text="All Customer Report">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="31.0" layoutY="258.0" mnemonicParsing="false" onAction="#AllEmployeeSalaryReportOnAction" prefHeight="46.0" prefWidth="226.0" style="-fx-background-color: #9b59b6; -fx-background-radius: 7;" text="All EmployeeSalary Report">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button layoutX="1111.0" layoutY="392.0" mnemonicParsing="false" onAction="#AllTrainReportPOnAction" prefHeight="46.0" prefWidth="226.0" style="-fx-background-color: #9b59b6; -fx-background-radius: 7;" text="All Train Report">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="1111.0" layoutY="468.0" mnemonicParsing="false" onAction="#AllEmployeeReportOnAction" prefHeight="46.0" prefWidth="226.0" style="-fx-background-color: #9b59b6; -fx-background-radius: 7;" text="All Employee Report">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="secondAnchorPane" layoutX="281.0" layoutY="172.0" prefHeight="686.0" prefWidth="1172.0">
+         <children>
+            <Label layoutX="87.0" layoutY="74.0" text="Sri Lanka Railaways" textFill="#f80000">
+               <font>
+                  <Font name="System Bold Italic" size="65.0" />
+               </font>
+            </Label>
+            <Label layoutX="87.0" layoutY="155.0" prefHeight="39.0" prefWidth="494.0" text="Welcome To Sri Lanka Railway Office" textFill="#fffefe">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+            <Pane layoutX="799.0" layoutY="196.0" prefHeight="332.0" prefWidth="287.0" style="-fx-background-color: #bdc3c7; -fx-border-color: black;">
+               <children>
+                  <Button layoutX="31.0" layoutY="179.0" mnemonicParsing="false" onAction="#AllCustomerReportOnAction" prefHeight="46.0" prefWidth="226.0" style="-fx-background-color: #9b59b6; -fx-background-radius: 7;" text="All Customer Report">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="31.0" layoutY="258.0" mnemonicParsing="false" onAction="#AllEmployeeSalaryReportOnAction" prefHeight="46.0" prefWidth="226.0" style="-fx-background-color: #9b59b6; -fx-background-radius: 7;" text="All EmployeeSalary Report">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Button layoutX="829.0" layoutY="220.0" mnemonicParsing="false" onAction="#AllTrainReportPOnAction" prefHeight="46.0" prefWidth="226.0" style="-fx-background-color: #9b59b6; -fx-background-radius: 7;" text="All Train Report">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="829.0" layoutY="296.0" mnemonicParsing="false" onAction="#AllEmployeeReportOnAction" prefHeight="46.0" prefWidth="226.0" style="-fx-background-color: #9b59b6; -fx-background-radius: 7;" text="All Employee Report">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
