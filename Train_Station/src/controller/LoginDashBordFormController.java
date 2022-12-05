@@ -4,10 +4,15 @@ import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -33,6 +38,14 @@ public class LoginDashBordFormController {
 
     public void btnSignInOnAction(ActionEvent actionEvent) {
 
+    }
+
+    public void setUi(String URI) throws IOException {
+        Parent parents = FXMLLoader.load(getClass().getResource("../views/" + URI + ".fxml"));
+        Stage stage=new Stage();
+        stage.setScene(new Scene(parents));
+        stage.setTitle(URI);
+        stage.show();
     }
 
     private void generateRealTime() {
