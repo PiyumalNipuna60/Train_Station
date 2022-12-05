@@ -51,7 +51,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/lib/commons-digester-2.1.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -167,6 +167,7 @@
       <workItem from="1670090611533" duration="1727000" />
       <workItem from="1670158617120" duration="1779000" />
       <workItem from="1670160442962" duration="1520000" />
+      <workItem from="1670263764286" duration="296000" />
     </task>
     <servers />
   </component>
