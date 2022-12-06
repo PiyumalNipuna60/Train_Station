@@ -23,7 +23,23 @@ public class LoginAdminFromController {
 
     public void btnAdminLoginOnAction(ActionEvent actionEvent) throws IOException {
 
-
+        if (Pattern.compile("^[a-zA-Z0-9]{0,10}$").matcher(txtUserNameAdmin.getText()).matches()) {
+            if (Pattern.compile("^[a-zA-Z0-9]{0,10}$").matcher(pwsAdmin.getText()).matches()) {
+                if (txtUserNameAdmin.getText().trim().equals("")) {
+                    if (pwsAdmin.getText().trim().equals("")) {
+                        Stage newStage = new Stage();
+                        newStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../views/AdminDashBordFrom.fxml"))));
+                        newStage.show();
+                        Stage window = (Stage) btnAdmin.getScene().getWindow();
+                        window.close();
+                    } else {
+                        new Alert(Alert.AlertType.WARNING, "Wrong Password").show();
+                    }
+                } else {
+                    new Alert(Alert.AlertType.WARNING, "Wrong User Name").show();
+                }
+            }
+        }
     }
 
     public void btnCancelOnAction(MouseEvent mouseEvent) {
