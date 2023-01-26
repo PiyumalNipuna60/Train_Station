@@ -312,7 +312,16 @@ public class AddBookingCustomerFromController {
     }
 
     public void btnPrintOnAction(ActionEvent actionEvent) {
+        try {
+            JasperDesign load = JRXmlLoader.load(this.getClass().getResourceAsStream("/views/reports/BookingReport.jrxml"));
+            JasperReport jasperReport = JasperCompileManager.compileReport(load);
+            Connection connection = DBConnection.getInstance().getConnection();
 
+            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, null, connection);
+            JasperViewer.viewReport(jasperPrint,false);
+        } catch (JRException | SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
 
