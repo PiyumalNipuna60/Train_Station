@@ -22,105 +22,7 @@
     <list default="true" id="45208517-7dbb-42d9-9fa4-451aa42eef4c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/AppInitialize.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/1000_F_296423009_OFShyxV6Mz6jnyUVEePkwWBzZ4hXuAh9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/12501-NOAIN2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/21653.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/46157.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/6953.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/OE612L0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/Untitled-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/Untitled-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/Untitled-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/Untitled-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/Untitled-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/Untitled-6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/Untitled-7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/draw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/gallery-1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/gallery-4.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/sideways-woman-listening-music-train-platform.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/sl_112520_38300_26.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/trash.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/user.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/assets/vintage-locomotive-railway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/AddBookingCustomerFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/AddEmployeeFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/AddTrainFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/AdminDashBordFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/CheckTrainScheduleFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/EmployeeSalaryFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/IncomeReportFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/LoadAllCustomerBookingFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/LoadAllEmployeeFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/LoadAllTrainScheduleUserFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/LoginAdminFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/LoginDashBordFormController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/ModifyBookingCustomerFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/ModifyEmployeeFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/ModifyTrainFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/SignInFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/controller/UserDashBordFromController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/db/DBConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/lib/bcprov-jdk15on-1.64.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/lib/castor-core-1.4.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/lib/castor-xml-1.4.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/lib/commons-beanutils-1.9.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/lib/commons-collections-3.2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/lib/commons-collections4-4.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/lib/commons-digester-2.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/lib/commons-lang3-3.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/lib/commons-logging-1.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/lib/ecj-3.21.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/lib/itext-2.1.7.js8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/lib/jackson-annotations-2.12.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/lib/jackson-core-2.12.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/lib/jackson-databind-2.12.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/lib/jasperreports-6.17.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/lib/javax.inject-1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/lib/jcommon-1.0.23.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/lib/jfoenix-8.0.10.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/lib/jfreechart-1.0.19.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/lib/mysql-connector-java-8.0.24.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/model/BookingCustomer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/model/Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/model/Train.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/model/TrainSchedulCheck.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/util/CrudUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/AddBookingCustomerFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/AddEmployeeFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/AddTrainFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/AdminDashBordFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/CheckTrainScheduleFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/EmployeeSalaryFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/IncomeReportFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/LoadAllCustomerBookingFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/LoadAllEmployeeFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/LoadAllTrainScheduleUserFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/LoginAdminFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/LoginDashBordForm.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/ModifyBookingCustomerFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/ModifyEmployeeFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/ModifyTrainFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/SignInFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/UserDashBordFrom.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/reports/AllCustomerReport.jasper" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/reports/AllCustomerReport.jrxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/reports/AllEmployeeReport.jasper" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/reports/AllEmployeeReport.jrxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/reports/AllTrainScheduleReport.jasper" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/reports/AllTrainScheduleReport.jrxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/reports/BookingReport.jasper" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/reports/BookingReport.jrxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/reports/EmployeeReport.jasper" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/reports/EmployeeReport.jrxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/reports/EmployeeSalaryReport.jasper" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/reports/EmployeeSalaryReport.jrxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/reports/TrainReport.jasper" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/reports/TrainReport.jrxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/reports/TrainScheduleReport.jasper" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Train_Station/views/reports/TrainScheduleReport.jrxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ModifyBookingCustomerFromController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ModifyBookingCustomerFromController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,7 +176,7 @@
       <workItem from="1670692646215" duration="24000" />
       <workItem from="1670693647149" duration="194000" />
       <workItem from="1673030418048" duration="113000" />
-      <workItem from="1674754562032" duration="636000" />
+      <workItem from="1674754562032" duration="1269000" />
     </task>
     <servers />
   </component>
@@ -311,25 +213,25 @@
     </state>
     <state x="473" y="164" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1670091539700" />
     <state x="473" y="174" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1667405111670" />
-    <state width="1493" height="171" key="GridCell.Tab.0.bottom" timestamp="1674754987284">
+    <state width="1493" height="171" key="GridCell.Tab.0.bottom" timestamp="1674755851922">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="171" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1674754987284" />
+    <state width="1493" height="171" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1674755851922" />
     <state width="698" height="176" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1668706459637" />
-    <state width="1493" height="171" key="GridCell.Tab.0.center" timestamp="1674754987284">
+    <state width="1493" height="171" key="GridCell.Tab.0.center" timestamp="1674755851922">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="171" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1674754987284" />
+    <state width="1493" height="171" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1674755851922" />
     <state width="698" height="176" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1668706459637" />
-    <state width="1493" height="171" key="GridCell.Tab.0.left" timestamp="1674754987284">
+    <state width="1493" height="171" key="GridCell.Tab.0.left" timestamp="1674755851922">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="171" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1674754987284" />
+    <state width="1493" height="171" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1674755851922" />
     <state width="698" height="176" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1668706459637" />
-    <state width="1493" height="171" key="GridCell.Tab.0.right" timestamp="1674754987284">
+    <state width="1493" height="171" key="GridCell.Tab.0.right" timestamp="1674755851922">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="171" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1674754987284" />
+    <state width="1493" height="171" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1674755851922" />
     <state width="698" height="176" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1668706459637" />
     <state width="1478" height="255" key="GridCell.Tab.1.bottom" timestamp="1670091149989">
       <screen x="0" y="0" width="1536" height="816" />
@@ -356,6 +258,10 @@
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1670091546424" />
     <state x="249" y="7" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1667407105833" />
+    <state x="578" y="322" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1674755407913">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="578" y="322" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.816@0.0.1536.816" timestamp="1674755407913" />
     <state x="418" y="49" key="new project wizard" timestamp="1668873124787">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
