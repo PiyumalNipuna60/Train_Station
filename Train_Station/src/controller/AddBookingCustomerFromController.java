@@ -18,6 +18,7 @@ import util.CrudUtil;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.regex.Pattern;
 
@@ -312,14 +313,42 @@ public class AddBookingCustomerFromController {
     }
 
     public void btnPrintOnAction(ActionEvent actionEvent) {
-        try {
-            JasperDesign load = JRXmlLoader.load(this.getClass().getResourceAsStream("/views/reports/BookingReport.jrxml"));
-            JasperReport jasperReport = JasperCompileManager.compileReport(load);
-            Connection connection = DBConnection.getInstance().getConnection();
+        String customerID = txtCusId.getText();
+        String customerName = txtCusName.getText();
+        String customerAddress = txtCusAddress.getText();
+        String customerContact = txtCusContact.getText();
+        String trainFrom = (String) cmbCusFrom.getValue();
+        String trainTo = (String) cmbCusTo.getValue();
+        String time = txtTrainTime.getText();
+        String train = (String) cmbCusTrain.getValue();
+        String seatNo = (String) cmbCusSeatNo.getValue();
+        String trainClass = (String) cmbCusClass.getValue();
+        String price = txtCusPrice.getText();
 
-            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, null, connection);
+        HashMap map=new HashMap();
+
+        map.put("id",customerID);
+        map.put("name",customerName);
+        map.put("address",customerAddress);
+        map.put("contact",customerContact);
+        map.put("trainFrom",trainFrom);
+        map.put("trainTo",trainTo);
+        map.put("time",time);
+        map.put("train",train);
+        map.put("seatNo",seatNo);
+        map.put("trainClass",trainClass);
+        map.put("price",price);
+
+        try {
+            JasperDesign load= JRXmlLoader.load(this.getClass().getResourceAsStream("/views/reports/BookingReport.jrxml")) ;
+            JasperReport compileReport = JasperCompileManager.compileReport(load);
+            //  JasperReport compileReport= (JasperReport) JRLoader.loadObject(this.getClass().getResource("/view/reports/BookingReport.jasper"));
+            JasperPrint jasperPrint= JasperFillManager.fillReport(compileReport,map, new JREmptyDataSource(1));
             JasperViewer.viewReport(jasperPrint,false);
-        } catch (JRException | SQLException | ClassNotFoundException e) {
+
+
+
+        }catch (JRException e){
             e.printStackTrace();
         }
     }
