@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="534.0" prefWidth="874.0" style="-fx-border-radius: 10px;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginUserFromController">
+   <children>
+      <Pane layoutX="365.0" layoutY="129.0" prefHeight="389.0" prefWidth="493.0" style="-fx-border-color: black;">
+         <children>
+            <Group fx:id="btnCancel" layoutX="28.0" layoutY="319.0" onMouseClicked="#btnCancelOnAction" onMouseDragged="#btnCancelOnAction" onMousePressed="#btnCancelOnAction">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="56.0" prefWidth="56.0" style="-fx-background-color: white; -fx-border-color: black;">
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.13106796116504854">
+                           <stops>
+                              <Stop color="#222120" />
+                              <Stop color="#171613" offset="0.996732026143791" />
+                              <Stop color="#171716" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="56.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/Untitled-7.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Group>
+            <Separator layoutX="147.0" layoutY="295.0" prefWidth="200.0" />
+         </children>
+      </Pane>
+      <Label layoutY="-3.0" prefHeight="45.0" prefWidth="874.0" style="-fx-background-color: #c5b368;" text=" User Login System" textFill="#141414">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnUser" layoutX="391.0" layoutY="358.0" mnemonicParsing="false" onAction="#btnUserLoginOnAction" prefHeight="56.0" prefWidth="447.0" style="-fx-background-color: #67ea67; -fx-background-radius: 8;" text="User Login">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.13106796116504854">
+               <stops>
+                  <Stop color="#222120" />
+                  <Stop color="#171613" offset="0.996732026143791" />
+                  <Stop color="#171716" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="pwsUser" layoutX="390.0" layoutY="261.0" prefHeight="56.0" prefWidth="447.0" promptText="Password">
+         <font>
+            <Font size="24.0" />
+         </font></PasswordField>
+      <TextField fx:id="txtUserName" layoutX="390.0" layoutY="165.0" prefHeight="45.0" prefWidth="447.0" promptText="User Name">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+      <Separator layoutX="345.0" layoutY="78.0" orientation="VERTICAL" prefHeight="395.0" prefWidth="0.0" />
+      <Pane layoutY="42.0" prefHeight="492.0" prefWidth="347.0" style="-fx-background-color: #1B9CFC;">
+         <children>
+            <Label layoutX="34.0" layoutY="82.0" text="welcom To Train Station" textFill="#fffafa">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Separator layoutX="26.0" layoutY="126.0" prefHeight="0.0" prefWidth="302.0" />
+            <ImageView fitHeight="68.0" fitWidth="93.0" layoutX="131.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/Untitled-5.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="34.0" layoutY="176.0" text="Improvements to facilitate safe," textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="212.0" text="efficient and comfortable" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="247.0" text="transport for passengers." textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fitHeight="68.0" fitWidth="78.0" layoutX="576.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Untitled-6.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
